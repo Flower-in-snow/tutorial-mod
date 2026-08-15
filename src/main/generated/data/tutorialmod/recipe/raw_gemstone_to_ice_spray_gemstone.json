@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "tutorialmod:raw_ice_spray_gemstone"
+    }
+  },
+  "pattern": [
+    " R ",
+    "RRR",
+    " R "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:ice_spray_gemstone"
+  }
+}

@@ -1,0 +1,42 @@
+package com.example.tutorialmod;
+
+import com.example.tutorialmod.block.ModBlocks;
+import com.example.tutorialmod.item.ModItemGroups;
+import com.example.tutorialmod.item.ModItems;
+import net.fabricmc.api.ModInitializer;
+
+import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.util.Identifier;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class TutorialMod implements ModInitializer {
+	public static final String MOD_ID = "tutorialmod";
+
+	// This logger is used to write text to the console and the log file.
+	// It is considered best practice to use your mod id as the logger's name.
+	// That way, it's clear which mod wrote info, warnings, and errors.
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	@Override
+	public void onInitialize() {
+		// This code runs as soon as Minecraft is in a mod-load-ready state.
+		// However, some things (like resources) may still be uninitialized.
+		// Proceed with mild caution.
+
+		LOGGER.info("Hello Fabric world!");
+
+		ModItems.registeredModItems();
+		ModItemGroups.registeredItemGroups();
+		ModBlocks.registeredModBlocks();
+
+		//api的写法
+		//FuelRegistry.INSTANCE.add(ModItems.FIRE_GEMSTONE, 1600);
+
+//		初始化调用
+	}
+	public static Identifier id(String path) {
+		return Identifier.of(MOD_ID, path);
+	}
+}

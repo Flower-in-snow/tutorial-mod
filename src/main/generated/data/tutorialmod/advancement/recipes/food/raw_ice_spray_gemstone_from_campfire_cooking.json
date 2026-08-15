@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ice_spray_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:ice_spray_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:raw_ice_spray_gemstone_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ice_spray_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:raw_ice_spray_gemstone_from_campfire_cooking"
+    ]
+  }
+}

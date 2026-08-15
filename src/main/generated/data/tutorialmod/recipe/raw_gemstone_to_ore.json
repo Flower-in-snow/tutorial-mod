@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "tutorialmod:raw_ice_spray_gemstone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tutorialmod:ice_spray_ore"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 60,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "tutorialmod:ice_spray_ore"
+  },
+  "result": {
+    "id": "tutorialmod:raw_ice_spray_gemstone"
+  }
+}

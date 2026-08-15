@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "gemstone",
+  "ingredient": {
+    "item": "tutorialmod:ice_spray_ore"
+  },
+  "result": {
+    "id": "tutorialmod:raw_ice_spray_gemstone"
+  }
+}
