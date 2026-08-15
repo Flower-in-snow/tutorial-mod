@@ -24,6 +24,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "冰霜宝石");
         translationBuilder.add(ModItems.FIRE_GEMSTONE, "火焰宝石");
         translationBuilder.add(ModItems.ICE_SPRAY_WAND, "冰霜法杖");
+        translationBuilder.add(ModItems.PROSPECTOR, "探矿器");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
     }

@@ -32,6 +32,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.ICE_SPRAY_BLOCK);
                     entries.add(ModItems.ICE_ESSENCE);
                     entries.add(ModItems.FIRE_GEMSTONE);
+                    entries.add(ModItems.PROSPECTOR);
                 })
                         .build()
                 );

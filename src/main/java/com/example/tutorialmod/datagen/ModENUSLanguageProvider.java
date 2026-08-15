@@ -24,6 +24,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "Ice Spray Gemstone");
         translationBuilder.add(ModItems.FIRE_GEMSTONE, "Fire Gemstone");
         translationBuilder.add(ModItems.ICE_SPRAY_WAND, "Ice Spray Wand");
+        translationBuilder.add(ModItems.PROSPECTOR, "Prospector");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
     }
