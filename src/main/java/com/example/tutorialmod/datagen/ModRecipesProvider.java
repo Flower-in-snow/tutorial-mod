@@ -66,7 +66,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .pattern(" R ")
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_ICE_SPRAY_GEMSTONE))
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "raw_gemstone_to_ice_spray_gemstone"));
-        //提供有序合成，倒数第二行是匹配成就系统，合成成功后解锁快速配方，最后给配方路径归类
+        //提供有序合成，倒数第二行是匹配成就系统，合成成功后解锁快速配方，最后给配方路径归类.input可以提供tags物品组
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ICE_SPRAY_ORE, 1)
                 .input(Items.STONE)

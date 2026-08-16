@@ -3,6 +3,7 @@ package com.example.tutorialmod.datagen;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -27,5 +28,10 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PROSPECTOR, "Prospector");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
+
+        translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");
+        translationBuilder.add(Prospector.KEY_ROUGH, " is over there!");
+        translationBuilder.add(Prospector.Tooltip, "A Magic Wand for Precious Ores.Hold Shift for Precise Search");
+        translationBuilder.add(Prospector.Basic_tooltip, "Hold §5CTRL§r for More Information");
     }
 }

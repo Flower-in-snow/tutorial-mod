@@ -1,14 +1,21 @@
 package com.example.tutorialmod.item.custom;
 
+import com.example.tutorialmod.tags.ModBlockTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class Prospector extends Item {
 
@@ -16,7 +23,9 @@ public class Prospector extends Item {
         super(settings);
     }
 
-    private static final int SEARCH_RADIS = 2;
+    private static final int SEARCH_RADIUS = 2;
+    public static final String KEY_PRECISE = "message.tutorialmod.prospector.keyprecise";
+    public static final String KEY_ROUGH = "message.tutorialmod.prospector.keyrough";//创建翻译key方便转文字
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -30,8 +39,10 @@ public class Prospector extends Item {
                 //实行精确搜索
                 for (int z = 0; z < pos.getY() + 64; z++) {
                     BlockPos TargetPos = pos.down(z);
-                    if (isRightBlock(TargetPos, world)) {
-                        player.sendMessage(Text.of("Successfully Found"));
+                    BlockState blockState = isRightBlock(TargetPos, world);
+                    if (blockState != null) {
+                        String name = blockState.getBlock().getTranslationKey();
+                        player.sendMessage(Text.translatable(KEY_PRECISE).append(Text.translatable(name)));
                         isFound = true;
                         break;
                     }
@@ -39,30 +50,56 @@ public class Prospector extends Item {
             } else {
                 //实行模糊搜索
                 for (int z = 0; z < pos.getY() + 64; z++) {
-                    for (int x = -SEARCH_RADIS; x < SEARCH_RADIS; x++) {
-                        for (int y = -SEARCH_RADIS; y < SEARCH_RADIS; y++) {
+                    for (int x = -SEARCH_RADIUS; x < SEARCH_RADIUS; x++) {
+                        for (int y = -SEARCH_RADIUS; y < SEARCH_RADIUS; y++) {
                             BlockPos TargetPos = pos.down(z).north(x).east(y);
-                            if (isRightBlock(TargetPos, world)) {
-                                player.sendMessage(Text.of("is over there!"));
+                            BlockState blockState = isRightBlock(TargetPos, world);
+                            if (blockState != null) {
+                                String name = blockState.getBlock().getTranslationKey();
+                                player.sendMessage(Text.translatable(name).append(Text.translatable(KEY_ROUGH)));
                                 isFound = true;
                                 break;
                             }
                         }
+                        if (isFound){
+                            break;
+                        }
+                    }
+                    if (isFound){
+                        break;
                     }
                 }
             }
             if (!isFound) {
                 player.sendMessage(Text.of("Sorry"));
             }
+            context.getStack().damage(1, player, EquipmentSlot.MAINHAND);
+            return ActionResult.SUCCESS;
         }
-
         return super.useOnBlock(context);
     }
-    private static final String TargetOre = "diamond";
-    private boolean isRightBlock(BlockPos targetPos,World world) {
+
+    private @Nullable BlockState isRightBlock(BlockPos targetPos, World world) {
         BlockState TargetBlockState = world.getBlockState(targetPos);
-        String TargetBlockName = TargetBlockState.getBlock().getTranslationKey();
-        return TargetBlockName.contains(TargetOre);
+        if (TargetBlockState.isIn(ModBlockTags.PROSPECTOR_ORE_LIST)){
+            return TargetBlockState;//返回BlockState方便后续获取名字
+        }
+        else {
+            return null;//如果使用@Nullable，必须带上if判断条件
+        }
+    }
+    //添加工具信息
+    public static final String Tooltip = "item.tutorialmod.prospector.tooltip";
+    public static final String Basic_tooltip = "item.tutorialmod.prospector.basictooltip";
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        super.appendTooltip(stack, context, tooltip, type);
+        if (Screen.hasControlDown()){
+            tooltip.add(Text.translatable(Tooltip));
+        }
+        else {
+            tooltip.add(Text.translatable(Basic_tooltip));
+        }
     }
 }
 

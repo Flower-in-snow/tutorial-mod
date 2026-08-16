@@ -6,6 +6,10 @@
   "item.tutorialmod.ice_spray_gemstone": "冰霜宝石",
   "item.tutorialmod.ice_spray_wand": "冰霜法杖",
   "item.tutorialmod.prospector": "探矿器",
+  "item.tutorialmod.prospector.basictooltip": "按住§5CTRL§r查看更多信息",
+  "item.tutorialmod.prospector.tooltip": "一种用于查找稀缺矿物的工具 按住shift来精确查找",
   "item.tutorialmod.raw_ice_spray_gemstone": "原始冰霜宝石",
-  "itemGroup.tutorialmod.tutorial": "教程组"
+  "itemGroup.tutorialmod.tutorial": "教程组",
+  "message.tutorialmod.prospector.keyprecise": "成功找到 ",
+  "message.tutorialmod.prospector.keyrough": " 就在那！"
 }

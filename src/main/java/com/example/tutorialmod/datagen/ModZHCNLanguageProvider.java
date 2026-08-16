@@ -3,6 +3,7 @@ package com.example.tutorialmod.datagen;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -27,5 +28,9 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PROSPECTOR, "探矿器");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
+        translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
+        translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");
+        translationBuilder.add(Prospector.Tooltip, "一种用于查找稀缺矿物的工具 按住shift来精确查找");
+        translationBuilder.add(Prospector.Basic_tooltip, "按住§5CTRL§r查看更多信息");
     }
 }
