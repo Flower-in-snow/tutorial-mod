@@ -1,10 +1,10 @@
-// 1.21	2026-08-17T15:14:32.2519737	TutorialMod/Model Definitions
+// 1.21	2026-08-17T16:09:57.5491665	TutorialMod/Model Definitions
 a5b6885704b8cdbb78c460c17baba35eaa525abc assets\tutorialmod\models\block\ice_spray_ore.json
 2aac191012e90f74ef861e645e82b901144fac4b assets\tutorialmod\blockstates\ice_spray_ore.json
 455334bc4092b26f28151e307a379e0d80c6ad65 assets\tutorialmod\models\item\ice_essence.json
 943869b1b72d1ae84a23b4cde9aeb9ad5da840af assets\tutorialmod\models\item\prospector.json
-0a3973ddcddb996d36b313c95739f1c393766be7 assets\tutorialmod\models\item\ice_spray_wand.json
 23db7dd3dcba18482c7bffe75b3cb5099f0211b1 assets\tutorialmod\models\item\fire_gemstone.json
+0a3973ddcddb996d36b313c95739f1c393766be7 assets\tutorialmod\models\item\ice_spray_wand.json
 81c3f5c4315466a708ac9688cbf1bad4881d128f assets\tutorialmod\models\item\ice_spray_ore.json
 49b42edff845509c8a2cbfe447179f7d62f52fb9 assets\tutorialmod\models\item\raw_ice_spray_gemstone.json
 8ecabe1342e754ac5d498e3958fe07afee9172e8 assets\tutorialmod\models\item\plate.json
