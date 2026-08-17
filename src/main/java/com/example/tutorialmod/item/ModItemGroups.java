@@ -33,6 +33,7 @@ public class ModItemGroups {
                     entries.add(ModItems.ICE_ESSENCE);
                     entries.add(ModItems.FIRE_GEMSTONE);
                     entries.add(ModItems.PROSPECTOR);
+                    entries.add(ModItems.PLATE);
                 })
                         .build()
                 );

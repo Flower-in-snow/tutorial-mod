@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
 
+import java.io.StringReader;
 import java.util.concurrent.CompletableFuture;
 
 public class ModZHCNLanguageProvider extends FabricLanguageProvider {
@@ -26,6 +27,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.FIRE_GEMSTONE, "火焰宝石");
         translationBuilder.add(ModItems.ICE_SPRAY_WAND, "冰霜法杖");
         translationBuilder.add(ModItems.PROSPECTOR, "探矿器");
+        translationBuilder.add(ModItems.PLATE, "盘子");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");

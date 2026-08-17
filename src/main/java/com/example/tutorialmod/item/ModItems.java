@@ -26,7 +26,8 @@ public class ModItems {
     public static final Item FIRE_GEMSTONE = registeredItems("fire_gemstone", new Item(new Item.Settings()));
 
     public static final Item ICE_ESSENCE = registeredItems("ice_essence", new ModFoodComponentsItem(new Item.Settings().food(ModFoodComponentsItem.ICE_ESSENCE)));
-    public static final Item PROSPECTOR = registeredItems("prospector",new Prospector(new Item.Settings().maxDamage(127).rarity(Rarity.EPIC)));
+    public static final Item PROSPECTOR = registeredItems("prospector", new Prospector(new Item.Settings().maxDamage(127).rarity(Rarity.EPIC)));
+    public static final Item PLATE = registeredItems("plate", new Item(new Item.Settings()));
 
     //    这里的ModFoodComponentsItem是我自己写的一个类，继承了Item类，重写了getMaxUseTime方法
     public static void addItemtoIngredients(FabricItemGroupEntries fabricItemGroupEntries){

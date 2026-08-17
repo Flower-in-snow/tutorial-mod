@@ -28,6 +28,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ICE_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FIRE_GEMSTONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PROSPECTOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PLATE, Models.GENERATED);
 
     }
 
