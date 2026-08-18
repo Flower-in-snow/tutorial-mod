@@ -28,6 +28,16 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PROSPECTOR, "Prospector");
         translationBuilder.add(ModItems.PLATE, "Plate");
 
+        translationBuilder.add(ModBlocks.ICE_SPRAY_BUTTON, "Ice Spray Button");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE, "Ice Spray Pressure Plate");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_FENCE, "Ice Spray Fence");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_FENCE_GATE, "Ice Spray Fence Gate");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_WALL, "Ice Spray Wall");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_DOOR, "Ice Spray Door");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_TRAPDOOR, "Ice Spray Trapdoor");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_STAIRS, "Ice Spray Stairs");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "Ice Spray Slab");
+
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 
         translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");

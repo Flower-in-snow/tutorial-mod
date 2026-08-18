@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tutorialmod:block/ice_spray_slab"
+    },
+    "type=double": {
+      "model": "tutorialmod:block/ice_spray_block"
+    },
+    "type=top": {
+      "model": "tutorialmod:block/ice_spray_slab_top"
+    }
+  }
+}

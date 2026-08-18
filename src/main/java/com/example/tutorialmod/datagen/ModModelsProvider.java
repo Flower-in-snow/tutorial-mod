@@ -1,10 +1,12 @@
 package com.example.tutorialmod.datagen;
 
+import com.example.tutorialmod.block.ModBlockFamilies;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
+import net.minecraft.data.family.BlockFamily;
 
 public class ModModelsProvider extends FabricModelProvider {
     public ModModelsProvider(FabricDataOutput output) {
@@ -14,7 +16,12 @@ public class ModModelsProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         //CubeAll是一个简单的立方体模型，所有的面都使用相同的纹理。它适用于像方块这样的简单方形物体。
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ICE_SPRAY_BLOCK);
+        ModBlockFamilies.getFamilies()
+                .filter(BlockFamily::shouldGenerateModels)
+                .forEach(blockFamily -> blockStateModelGenerator
+                        .registerCubeAllModelTexturePool(blockFamily.getBaseBlock())
+                        .family(blockFamily));
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ICE_SPRAY_ORE);
 
     }

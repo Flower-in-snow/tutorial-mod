@@ -29,6 +29,16 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PROSPECTOR, "探矿器");
         translationBuilder.add(ModItems.PLATE, "盘子");
 
+        translationBuilder.add(ModBlocks.ICE_SPRAY_BUTTON, "冰霜按钮");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE, "冰霜压力板");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_FENCE, "冰霜栅栏");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_FENCE_GATE, "冰霜栅栏门");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_WALL, "冰霜砖块");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_DOOR, "冰霜门");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_TRAPDOOR, "冰霜活版门");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_STAIRS, "冰霜楼梯");
+        translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "冰霜台阶");
+
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");

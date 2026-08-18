@@ -34,6 +34,16 @@ public class ModItemGroups {
                     entries.add(ModItems.FIRE_GEMSTONE);
                     entries.add(ModItems.PROSPECTOR);
                     entries.add(ModItems.PLATE);
+
+                    entries.add(ModBlocks.ICE_SPRAY_STAIRS);
+                    entries.add(ModBlocks.ICE_SPRAY_SLAB);
+                    entries.add(ModBlocks.ICE_SPRAY_BUTTON);
+                    entries.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE);
+                    entries.add(ModBlocks.ICE_SPRAY_FENCE);
+                    entries.add(ModBlocks.ICE_SPRAY_FENCE_GATE);
+                    entries.add(ModBlocks.ICE_SPRAY_WALL);
+                    entries.add(ModBlocks.ICE_SPRAY_DOOR);
+                    entries.add(ModBlocks.ICE_SPRAY_TRAPDOOR);
                 })
                         .build()
                 );

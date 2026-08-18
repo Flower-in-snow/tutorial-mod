@@ -1,10 +1,12 @@
 package com.example.tutorialmod.datagen;
 
 import com.example.tutorialmod.TutorialMod;
+import com.example.tutorialmod.block.ModBlockFamilies;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.RecipeProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
@@ -15,6 +17,8 @@ import net.minecraft.recipe.CampfireCookingRecipe;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
+import net.minecraft.resource.featuretoggle.FeatureSet;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -26,6 +30,12 @@ public class ModRecipesProvider extends FabricRecipeProvider {
 
     public ModRecipesProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
+    }
+
+    public static void generateFamilies(RecipeExporter exporter, FeatureSet enabledFeatures) {
+        ModBlockFamilies.getFamilies()
+                .filter(BlockFamily::shouldGenerateRecipes)
+                .forEach(Blockfamily -> generateFamily(exporter, Blockfamily, enabledFeatures));
     }
 
     @Override
@@ -75,6 +85,6 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "raw_gemstone_to_ore"));
         //提供无序合成，当有RAW_ICE_SPRAY_GEMSTONE时解锁快速配方，其他类似
 
-
+        generateFamilies(exporter, FeatureSet.of(FeatureFlags.VANILLA));
     }
 }

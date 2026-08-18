@@ -1,4 +1,8 @@
-// 1.21	2026-08-17T16:09:57.5491665	TutorialMod/Tags for minecraft:block
+// 1.21	2026-08-18T13:38:24.138893	TutorialMod/Tags for minecraft:block
 1c561b5c2392d1263b0648e8f80acbb9f2d96972 data\minecraft\tags\block\needs_iron_tool.json
+ca8ccdd6b2019062995be4db7f205168e75b7173 data\minecraft\tags\block\walls.json
+802c2f2662602bbf1cf8a11738b0dc3324bf624a data\minecraft\tags\block\wooden_buttons.json
 72a65eab0924e0d2d49182ff469d4fbd2c9fe8c7 data\tutorialmod\tags\block\prospector_ore_list.json
+daf6265a2093a64df942890a8411e22778631af2 data\minecraft\tags\block\fence_gates.json
 1c561b5c2392d1263b0648e8f80acbb9f2d96972 data\minecraft\tags\block\mineable\pickaxe.json
+53668b02493b54b2fd92e2fca0745f7ae80270ab data\minecraft\tags\block\wooden_fences.json
