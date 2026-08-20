@@ -1,7 +1,5 @@
 package com.example.tutorialmod.item.custom;
 
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;

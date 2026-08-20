@@ -34,7 +34,12 @@ public class ModItemGroups {
                     entries.add(ModItems.FIRE_GEMSTONE);
                     entries.add(ModItems.PROSPECTOR);
                     entries.add(ModItems.PLATE);
-                    entries.add(ModItems.PICKONIMBUS);
+                    entries.add(ModItems.BINGONIMBUS_2000);
+                    entries.add(ModItems.SORROW);
+                    entries.add(ModItems.SORROW_HELMET);
+                    entries.add(ModItems.SORROW_CHESTPLATE);
+                    entries.add(ModItems.SORROW_LEGGINGS);
+                    entries.add(ModItems.SORROW_BOOTS);
 
                     entries.add(ModBlocks.ICE_SPRAY_STAIRS);
                     entries.add(ModBlocks.ICE_SPRAY_SLAB);

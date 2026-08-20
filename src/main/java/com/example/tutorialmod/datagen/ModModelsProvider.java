@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.*;
 import net.minecraft.data.family.BlockFamily;
+import net.minecraft.item.ArmorItem;
 
 public class ModModelsProvider extends FabricModelProvider {
     public ModModelsProvider(FabricDataOutput output) {
@@ -35,9 +36,17 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ICE_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FIRE_GEMSTONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SORROW, Models.GENERATED);
 
-        itemModelGenerator.register(ModItems.PICKONIMBUS, Models.HANDHELD);//工具为手持物品形式
+        //工具为手持物品形式
+        itemModelGenerator.register(ModItems.BINGONIMBUS_2000, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PROSPECTOR, Models.HANDHELD);
+
+        //盔甲也不一样
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SORROW_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SORROW_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SORROW_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SORROW_BOOTS);
 
     }
 

@@ -9,7 +9,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
 
-import java.io.StringReader;
 import java.util.concurrent.CompletableFuture;
 
 public class ModZHCNLanguageProvider extends FabricLanguageProvider {
@@ -26,10 +25,15 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAW_ICE_SPRAY_GEMSTONE, "原始冰霜宝石");
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "冰霜宝石");
         translationBuilder.add(ModItems.FIRE_GEMSTONE, "火焰宝石");
+        translationBuilder.add(ModItems.SORROW, "悲伤");
+
         translationBuilder.add(ModItems.ICE_SPRAY_WAND, "冰霜法杖");
         translationBuilder.add(ModItems.PROSPECTOR, "§4探矿器§r");
-        translationBuilder.add(ModItems.PLATE, "盘子");
-        translationBuilder.add(ModItems.PICKONIMBUS, "§5Pickonimbus§r镐");
+        translationBuilder.add(ModItems.BINGONIMBUS_2000, "§5Bingonimbus 2000§r镐");
+        translationBuilder.add(ModItems.SORROW_HELMET, "悲伤头盔");
+        translationBuilder.add(ModItems.SORROW_CHESTPLATE, "悲伤胸甲");
+        translationBuilder.add(ModItems.SORROW_LEGGINGS, "悲伤护腿");
+        translationBuilder.add(ModItems.SORROW_BOOTS, "悲伤靴子");
 
         translationBuilder.add(ModBlocks.ICE_SPRAY_BUTTON, "冰霜按钮");
         translationBuilder.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE, "冰霜压力板");
@@ -40,12 +44,13 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_SPRAY_TRAPDOOR, "冰霜活版门");
         translationBuilder.add(ModBlocks.ICE_SPRAY_STAIRS, "冰霜楼梯");
         translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "冰霜台阶");
+        translationBuilder.add(ModItems.PLATE, "盘子");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");
-        translationBuilder.add(Prospector.Tooltip, "一种用于查找稀缺矿物的工具 按住shift来精确查找");
+        translationBuilder.add(Prospector.Tooltip, "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找");
         translationBuilder.add(Prospector.Basic_tooltip, "按住§5CTRL§r查看更多信息");
-        translationBuilder.add(Pickonimbus.Tooltip, "一种强大的稿子在使用§22,000§r次后损坏");
+        translationBuilder.add(Pickonimbus.Tooltip, "一种强大的镐子似乎§6不会§r损坏");
     }
 }

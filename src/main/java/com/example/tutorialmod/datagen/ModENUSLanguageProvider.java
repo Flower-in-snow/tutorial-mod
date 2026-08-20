@@ -24,11 +24,16 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.RAW_ICE_SPRAY_GEMSTONE, "Raw Ice Spray Gemstone");
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "Ice Spray Gemstone");
+        translationBuilder.add(ModItems.SORROW, "Sorrow");
         translationBuilder.add(ModItems.FIRE_GEMSTONE, "Fire Gemstone");
-        translationBuilder.add(ModItems.ICE_SPRAY_WAND, "Ice Spray Wand");
+
+        translationBuilder.add(ModItems.ICE_SPRAY_WAND, "§6Ice Spray Wand§r");
         translationBuilder.add(ModItems.PROSPECTOR, "§4Prospector§r");
-        translationBuilder.add(ModItems.PLATE, "Plate");
-        translationBuilder.add(ModItems.PICKONIMBUS, "§5Pickonimbus§r");
+        translationBuilder.add(ModItems.BINGONIMBUS_2000, "§5Bingonimbus 2000§r");
+        translationBuilder.add(ModItems.SORROW_CHESTPLATE, "§6Sorrow Chestplate§r");
+        translationBuilder.add(ModItems.SORROW_LEGGINGS, "§6Sorrow Leggings§r");
+        translationBuilder.add(ModItems.SORROW_BOOTS, "§6Sorrow Boots§r");
+        translationBuilder.add(ModItems.SORROW_HELMET, "§6Sorrow Helmet§r");
 
         translationBuilder.add(ModBlocks.ICE_SPRAY_BUTTON, "Ice Spray Button");
         translationBuilder.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE, "Ice Spray Pressure Plate");
@@ -39,13 +44,14 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_SPRAY_TRAPDOOR, "Ice Spray Trapdoor");
         translationBuilder.add(ModBlocks.ICE_SPRAY_STAIRS, "Ice Spray Stairs");
         translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "Ice Spray Slab");
+        translationBuilder.add(ModItems.PLATE, "Plate");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 
         translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");
         translationBuilder.add(Prospector.KEY_ROUGH, " is over there!");
-        translationBuilder.add(Prospector.Tooltip, "A Magic Wand for Precious Ores.Hold Shift for Precise Search");
+        translationBuilder.add(Prospector.Tooltip, "A Magic Wand for Precious Ores.Hold §5Shift§r for Precise Search");
         translationBuilder.add(Prospector.Basic_tooltip, "Hold §5CTRL§r for More Information");
-        translationBuilder.add(Pickonimbus.Tooltip, "A powerful tool that breaks after §22,000§r uses");
+        translationBuilder.add(Pickonimbus.Tooltip, "A powerful tool that §2doesn't§r seem to break");
     }
 }

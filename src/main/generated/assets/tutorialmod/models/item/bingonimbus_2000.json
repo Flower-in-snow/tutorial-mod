@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "tutorialmod:item/pickonimbus"
+    "layer0": "tutorialmod:item/bingonimbus_2000"
   }
 }

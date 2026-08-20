@@ -58,6 +58,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 60, ModBlocks.ICE_SPRAY_ORE, ModItems.RAW_ICE_SPRAY_GEMSTONE, 0.35f);
         //这个函数的功能是提供食物配方，第二第三个参数是厨具和方式，第六个是原材料，第七个是成品
 
+        //提供有序合成，倒数第二行是匹配成就系统，合成成功后解锁快速配方，最后给配方路径归类.input可以提供tags物品组
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ICE_SPRAY_WAND, 1)
                 .input('B', ModBlocks.ICE_SPRAY_BLOCK)
                 .input('G', ModItems.ICE_SPRAY_GEMSTONE)
@@ -76,14 +77,42 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .pattern(" R ")
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_ICE_SPRAY_GEMSTONE))
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "raw_gemstone_to_ice_spray_gemstone"));
-        //提供有序合成，倒数第二行是匹配成就系统，合成成功后解锁快速配方，最后给配方路径归类.input可以提供tags物品组
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SORROW_BOOTS)
+                .input('X', ModItems.SORROW)
+                .pattern("X X")
+                .pattern("X X")
+                .criterion("has_sorrow", conditionsFromItem(ModItems.SORROW))
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "sorrow_to_sorrow_boots"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SORROW_CHESTPLATE)
+                .input('X', ModItems.SORROW)
+                .pattern("X X")
+                .pattern("XXX")
+                .pattern("XXX")
+                .criterion("has_sorrow", conditionsFromItem(ModItems.SORROW))
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "sorrow_to_sorrow_chestplate"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SORROW_HELMET)
+                .input('X', ModItems.SORROW)
+                .pattern("XXX")
+                .pattern("X X")
+                .criterion("has_sorrow", conditionsFromItem(ModItems.SORROW))
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "sorrow_to_sorrow_helmet"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SORROW_LEGGINGS)
+                .input('X', ModItems.SORROW)
+                .pattern("XXX")
+                .pattern("X X")
+                .pattern("X X")
+                .criterion("has_sorrow", conditionsFromItem(ModItems.SORROW))
+                .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "sorrow_to_sorrow_leggings"));
+
+        //提供无序合成，当有RAW_ICE_SPRAY_GEMSTONE时解锁快速配方，其他类似
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.ICE_SPRAY_ORE, 1)
                 .input(Items.STONE)
                 .input(ModItems.RAW_ICE_SPRAY_GEMSTONE)
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_ICE_SPRAY_GEMSTONE))
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "raw_gemstone_to_ore"));
-        //提供无序合成，当有RAW_ICE_SPRAY_GEMSTONE时解锁快速配方，其他类似
+
 
         generateFamilies(exporter, FeatureSet.of(FeatureFlags.VANILLA));
     }

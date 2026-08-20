@@ -6,6 +6,8 @@ import com.example.tutorialmod.item.custom.Pickonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -21,23 +23,42 @@ public class ModItems {
 //        上述这样写也可以，但是我们查看Registry类里的register方法，发现register方法可以简化
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), item);
     }
-    public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new Item(new Item.Settings()));//  创造新物品
+    public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new Item(new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).rarity(Rarity.EPIC)));//  创造新物品
     public static final Item RAW_ICE_SPRAY_GEMSTONE = registeredItems("raw_ice_spray_gemstone", new Item(new Item.Settings()));
     public static final Item ICE_SPRAY_GEMSTONE = registeredItems("ice_spray_gemstone", new Item(new Item.Settings()));
     public static final Item FIRE_GEMSTONE = registeredItems("fire_gemstone", new Item(new Item.Settings().fireproof()));
+    public static final Item SORROW = registeredItems("sorrow", new Item(new Item.Settings().rarity(Rarity.RARE)));
 
     public static final Item ICE_ESSENCE = registeredItems("ice_essence", new ModFoodComponentsItem(new Item.Settings().food(ModFoodComponentsItem.ICE_ESSENCE)));
     public static final Item PROSPECTOR = registeredItems("prospector", new Prospector(new Item.Settings().maxDamage(127)));
     public static final Item PLATE = registeredItems("plate", new Item(new Item.Settings()));
 
-    public static final Item PICKONIMBUS = registeredItems("pickonimbus",
-            new Pickonimbus(ModToolMaterials.PICKONIMBUS, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PICKONIMBUS, 29.0f, -2.8f))));
+    public static final Item BINGONIMBUS_2000 = registeredItems("bingonimbus_2000",
+            new Pickonimbus(ModToolMaterials.BINGONIMBUS_2000, new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false))
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BINGONIMBUS_2000, 29.0f, -2.8f))));
+
+    public static final Item SORROW_HELMET = registeredItems("sorrow_helmet",
+            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.HELMET,
+                    new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
+
+    public static final Item SORROW_CHESTPLATE = registeredItems("sorrow_chestplate",
+            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.CHESTPLATE,
+                    new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
+
+    public static final Item SORROW_LEGGINGS = registeredItems("sorrow_leggings",
+            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.LEGGINGS,
+                    new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
+
+    public static final Item SORROW_BOOTS = registeredItems("sorrow_boots",
+            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.BOOTS,
+                    new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
     //    这里的ModFoodComponentsItem是我自己写的一个类，继承了Item类，重写了getMaxUseTime方法
     public static void addItemtoIngredients(FabricItemGroupEntries fabricItemGroupEntries){
         //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
         fabricItemGroupEntries.add(ICE_SPRAY_GEMSTONE);
         fabricItemGroupEntries.add(RAW_ICE_SPRAY_GEMSTONE);
+        fabricItemGroupEntries.add(SORROW);
     }
 
     public static void addItemtoNatural(FabricItemGroupEntries fabricItemGroupEntries){
@@ -48,6 +69,10 @@ public class ModItems {
     public static void addItemtoCombat(FabricItemGroupEntries fabricItemGroupEntries){
         //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
         fabricItemGroupEntries.add(ICE_SPRAY_WAND);
+        fabricItemGroupEntries.add(SORROW_HELMET);
+        fabricItemGroupEntries.add(SORROW_CHESTPLATE);
+        fabricItemGroupEntries.add(SORROW_LEGGINGS);
+        fabricItemGroupEntries.add(SORROW_BOOTS);
     }
 
     public static void addItemtoBuildingBlocks(FabricItemGroupEntries fabricItemGroupEntries){
@@ -63,7 +88,7 @@ public class ModItems {
     public static void addItemtoTools(FabricItemGroupEntries fabricItemGroupEntries){
         //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
         fabricItemGroupEntries.add(PROSPECTOR);
-        fabricItemGroupEntries.add(PICKONIMBUS);
+        fabricItemGroupEntries.add(BINGONIMBUS_2000);
     }
 
     public static void registeredModItems(){

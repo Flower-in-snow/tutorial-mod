@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sorrow": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:sorrow"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:sorrow_to_sorrow_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sorrow"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:sorrow_to_sorrow_boots"
+    ]
+  }
+}

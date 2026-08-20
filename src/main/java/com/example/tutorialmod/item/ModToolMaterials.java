@@ -10,8 +10,8 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
-    PICKONIMBUS(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1999, 12.0F, 0.0F, 30,
-            () -> Ingredient.ofItems(ModItems.PICKONIMBUS));
+    BINGONIMBUS_2000(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 1999, 12.0F, 0.0F, 30,
+            () -> Ingredient.ofItems(ModItems.BINGONIMBUS_2000));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
