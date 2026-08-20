@@ -34,6 +34,7 @@ public class ModItemGroups {
                     entries.add(ModItems.FIRE_GEMSTONE);
                     entries.add(ModItems.PROSPECTOR);
                     entries.add(ModItems.PLATE);
+                    entries.add(ModItems.PICKONIMBUS);
 
                     entries.add(ModBlocks.ICE_SPRAY_STAIRS);
                     entries.add(ModBlocks.ICE_SPRAY_SLAB);

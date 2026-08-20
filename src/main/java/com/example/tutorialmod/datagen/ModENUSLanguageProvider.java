@@ -3,6 +3,7 @@ package com.example.tutorialmod.datagen;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.item.custom.Pickonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -25,8 +26,9 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "Ice Spray Gemstone");
         translationBuilder.add(ModItems.FIRE_GEMSTONE, "Fire Gemstone");
         translationBuilder.add(ModItems.ICE_SPRAY_WAND, "Ice Spray Wand");
-        translationBuilder.add(ModItems.PROSPECTOR, "Prospector");
+        translationBuilder.add(ModItems.PROSPECTOR, "§4Prospector§r");
         translationBuilder.add(ModItems.PLATE, "Plate");
+        translationBuilder.add(ModItems.PICKONIMBUS, "§5Pickonimbus§r");
 
         translationBuilder.add(ModBlocks.ICE_SPRAY_BUTTON, "Ice Spray Button");
         translationBuilder.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE, "Ice Spray Pressure Plate");
@@ -44,5 +46,6 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(Prospector.KEY_ROUGH, " is over there!");
         translationBuilder.add(Prospector.Tooltip, "A Magic Wand for Precious Ores.Hold Shift for Precise Search");
         translationBuilder.add(Prospector.Basic_tooltip, "Hold §5CTRL§r for More Information");
+        translationBuilder.add(Pickonimbus.Tooltip, "A powerful tool that breaks after §22,000§r uses");
     }
 }

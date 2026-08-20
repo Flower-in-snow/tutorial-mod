@@ -3,6 +3,7 @@ package com.example.tutorialmod.datagen;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.item.custom.Pickonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -26,8 +27,9 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ICE_SPRAY_GEMSTONE, "冰霜宝石");
         translationBuilder.add(ModItems.FIRE_GEMSTONE, "火焰宝石");
         translationBuilder.add(ModItems.ICE_SPRAY_WAND, "冰霜法杖");
-        translationBuilder.add(ModItems.PROSPECTOR, "探矿器");
+        translationBuilder.add(ModItems.PROSPECTOR, "§4探矿器§r");
         translationBuilder.add(ModItems.PLATE, "盘子");
+        translationBuilder.add(ModItems.PICKONIMBUS, "§5Pickonimbus§r镐");
 
         translationBuilder.add(ModBlocks.ICE_SPRAY_BUTTON, "冰霜按钮");
         translationBuilder.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE, "冰霜压力板");
@@ -44,5 +46,6 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");
         translationBuilder.add(Prospector.Tooltip, "一种用于查找稀缺矿物的工具 按住shift来精确查找");
         translationBuilder.add(Prospector.Basic_tooltip, "按住§5CTRL§r查看更多信息");
+        translationBuilder.add(Pickonimbus.Tooltip, "一种强大的稿子在使用§22,000§r次后损坏");
     }
 }

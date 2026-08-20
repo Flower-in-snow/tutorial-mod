@@ -34,8 +34,10 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ICE_SPRAY_WAND, Models.GENERATED);
         itemModelGenerator.register(ModItems.ICE_ESSENCE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FIRE_GEMSTONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PROSPECTOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.PLATE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.PICKONIMBUS, Models.HANDHELD);//工具为手持物品形式
+        itemModelGenerator.register(ModItems.PROSPECTOR, Models.HANDHELD);
 
     }
 
