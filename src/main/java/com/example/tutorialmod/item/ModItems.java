@@ -24,7 +24,7 @@ public class ModItems {
     public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new Item(new Item.Settings()));//  创造新物品
     public static final Item RAW_ICE_SPRAY_GEMSTONE = registeredItems("raw_ice_spray_gemstone", new Item(new Item.Settings()));
     public static final Item ICE_SPRAY_GEMSTONE = registeredItems("ice_spray_gemstone", new Item(new Item.Settings()));
-    public static final Item FIRE_GEMSTONE = registeredItems("fire_gemstone", new Item(new Item.Settings()));
+    public static final Item FIRE_GEMSTONE = registeredItems("fire_gemstone", new Item(new Item.Settings().fireproof()));
 
     public static final Item ICE_ESSENCE = registeredItems("ice_essence", new ModFoodComponentsItem(new Item.Settings().food(ModFoodComponentsItem.ICE_ESSENCE)));
     public static final Item PROSPECTOR = registeredItems("prospector", new Prospector(new Item.Settings().maxDamage(127)));
