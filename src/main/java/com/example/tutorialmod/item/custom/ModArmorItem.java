@@ -12,15 +12,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
 
     //要用MAP来存储盔甲材料和对应的效果
-    private static final Map<ArmorMaterial, StatusEffectInstance> MAP = (new ImmutableMap.Builder<ArmorMaterial, StatusEffectInstance>()
-            .put(ModArmorMaterials.SORROW.value(), new StatusEffectInstance(
-                    StatusEffects.INVISIBILITY, 240, 0, false, false, true))
-            .build());
+    private static final Map<ArmorMaterial, List<StatusEffectInstance>> MAP = new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>()
+            .put(ModArmorMaterials.SORROW.value(), Arrays.asList(
+                    new StatusEffectInstance(StatusEffects.INVISIBILITY, 240, 0, false, false, true),
+                    new StatusEffectInstance(StatusEffects.RESISTANCE, 240, 1, false, false, true),
+                    new StatusEffectInstance(StatusEffects.REGENERATION, 240, 1, false, false, true))).build();
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);
@@ -45,28 +48,30 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private void playerAddEffects(PlayerEntity player) {
-        for (Map.Entry<ArmorMaterial, StatusEffectInstance> entry : MAP.entrySet()) {
+        for (Map.Entry<ArmorMaterial, List<StatusEffectInstance>> entry : MAP.entrySet()) {
             ArmorMaterial material = entry.getKey();
-            StatusEffectInstance effect = entry.getValue();
+            List<StatusEffectInstance> effects = entry.getValue();
             if (hasRightMaterialOfArmor(player, material)){
-                executeAndAddEffects(player, effect);
+                executeAndAddEffects(player, effects);
             }
         }
     }
 
-    private void executeAndAddEffects(PlayerEntity player, StatusEffectInstance effect) {
+    private void executeAndAddEffects(PlayerEntity player, List<StatusEffectInstance> effects) {
         //检测玩家当前状态，并给予效果
-        boolean addEffect = false;
-        int StandardTime = 220;
-        StatusEffectInstance existingEffect = player.getStatusEffect(effect.getEffectType());
-        if (existingEffect == null){
-            addEffect = true;
-        } else if (existingEffect.getDuration() < StandardTime) {
-            addEffect = true;
-        }
-        if (addEffect){
-            //这里每次都要创建新的药水实例，不然只有一个导致药水只会添加一次
-            player.addStatusEffect(new StatusEffectInstance(effect));
+        for (StatusEffectInstance effect : effects){
+            boolean addEffect = false;
+            int StandardTime = 220;
+            StatusEffectInstance existingEffect = player.getStatusEffect(effect.getEffectType());
+            if (existingEffect == null){
+                addEffect = true;
+            } else if (existingEffect.getDuration() < StandardTime) {
+                addEffect = true;
+            }
+            if (addEffect){
+                //这里每次都要创建新的药水实例，不然只有一个导致药水只会添加一次
+                player.addStatusEffect(new StatusEffectInstance(effect));
+            }
         }
     }
 
