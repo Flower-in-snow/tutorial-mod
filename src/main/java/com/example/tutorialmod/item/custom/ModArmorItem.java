@@ -9,15 +9,19 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
+import javax.print.DocFlavor;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
 
+    public static int count = 0;
     //要用MAP来存储盔甲材料和对应的效果
     private static final Map<ArmorMaterial, List<StatusEffectInstance>> MAP = new ImmutableMap.Builder<ArmorMaterial, List<StatusEffectInstance>>()
             .put(ModArmorMaterials.SORROW.value(), Arrays.asList(
@@ -35,7 +39,21 @@ public class ModArmorItem extends ArmorItem {
         if (!world.isClient() && entity instanceof PlayerEntity player && hasFullSuitOfArmor(player)) {
             playerAddEffects(player);
         }
+        if (!world.isClient() && entity instanceof PlayerEntity player){
+            count = getMatchingArmorCount(player);//实时检查穿戴的盔甲数量
+        }
         super.inventoryTick(stack, world, entity, slot, selected);
+    }
+
+    private int getMatchingArmorCount(PlayerEntity player) {
+        int matchingCount = 0;
+        for (ItemStack armorStack : player.getInventory().armor) {
+            if (armorStack.getItem() instanceof ArmorItem armorItem
+                    && armorItem.getMaterial().value() == this.getMaterial().value()) {
+                matchingCount++;
+            }
+        }
+        return matchingCount;
     }
 
     private boolean hasFullSuitOfArmor(PlayerEntity player) {
@@ -91,5 +109,15 @@ public class ModArmorItem extends ArmorItem {
                 chestplate.getMaterial().value() == material &&
                 leggings.getMaterial().value() == material &&
                 boots.getMaterial().value() == material;
+    }
+    public static final String Sorrow_ArmorTip_1 = "tooltip.tutorialmod.sorrow_armor_1";
+    public static final String Sorrow_ArmorTip_2 = "tooltip.tutorialmod.sorrow_armor_2";
+    public static final String Sorrow_ArmorTip_3 = "tooltip.tutorialmod.sorrow_armor_3";
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable(Sorrow_ArmorTip_1, count));
+        tooltip.add(Text.translatable(Sorrow_ArmorTip_2));
+        tooltip.add(Text.translatable(Sorrow_ArmorTip_3));
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

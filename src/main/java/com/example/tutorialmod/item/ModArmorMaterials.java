@@ -24,7 +24,7 @@ public class ModArmorMaterials {
         map.put(ArmorItem.Type.CHESTPLATE, 5);
         map.put(ArmorItem.Type.HELMET, 2);
         map.put(ArmorItem.Type.BODY, 4);
-    }), 12, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3.0F, 0.1F, () -> Ingredient.ofItems(ModItems.SORROW));
+    }), 12, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3.0F, 1.0F, () -> Ingredient.ofItems(ModItems.SORROW));
 
 
     private static RegistryEntry<ArmorMaterial> register(
