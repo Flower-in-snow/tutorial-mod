@@ -2,6 +2,7 @@ package com.example.tutorialmod.item;
 
 import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.block.ModBlocks;
+import com.example.tutorialmod.item.custom.ModArmorItem;
 import com.example.tutorialmod.item.custom.Pickonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -38,19 +39,19 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BINGONIMBUS_2000, 29.0f, -2.8f))));
 
     public static final Item SORROW_HELMET = registeredItems("sorrow_helmet",
-            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.HELMET,
+            new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.HELMET,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
     public static final Item SORROW_CHESTPLATE = registeredItems("sorrow_chestplate",
-            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.CHESTPLATE,
+            new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.CHESTPLATE,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
     public static final Item SORROW_LEGGINGS = registeredItems("sorrow_leggings",
-            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.LEGGINGS,
+            new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.LEGGINGS,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
     public static final Item SORROW_BOOTS = registeredItems("sorrow_boots",
-            new ArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.BOOTS,
+            new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.BOOTS,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
     //    这里的ModFoodComponentsItem是我自己写的一个类，继承了Item类，重写了getMaxUseTime方法
