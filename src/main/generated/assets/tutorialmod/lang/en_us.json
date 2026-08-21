@@ -19,7 +19,7 @@
   "item.tutorialmod.plate": "Plate",
   "item.tutorialmod.prospector": "§4Prospector§r",
   "item.tutorialmod.prospector.basictooltip": "Hold §5CTRL§r for More Information",
-  "item.tutorialmod.prospector.tooltip": "A Magic Wand for Precious Ores.Hold §5Shift§r for Precise Search",
+  "item.tutorialmod.prospector.tooltip": "A Magic Wand for Precious Ores. Hold §5Shift§r for Precise Search",
   "item.tutorialmod.raw_ice_spray_gemstone": "Raw Ice Spray Gemstone",
   "item.tutorialmod.sorrow": "Sorrow",
   "item.tutorialmod.sorrow_boots": "§6Sorrow Boots§r",
@@ -28,5 +28,8 @@
   "item.tutorialmod.sorrow_leggings": "§6Sorrow Leggings§r",
   "itemGroup.tutorialmod.tutorial": "Tutorial Group",
   "message.tutorialmod.prospector.keyprecise": "Successfully Found ",
-  "message.tutorialmod.prospector.keyrough": " is over there!"
+  "message.tutorialmod.prospector.keyrough": " is over there!",
+  "tooltip.tutorialmod.sorrow_armor_1": "§6FULL SET BONUS: Mist Aura (§r§e%d§r§6/4)§r",
+  "tooltip.tutorialmod.sorrow_armor_2": "§8Hides the wearer in a guise of mist,§r",
+  "tooltip.tutorialmod.sorrow_armor_3": "§8granting a strong mist aura.§r"
 }
