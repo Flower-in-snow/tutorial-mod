@@ -4,6 +4,7 @@ import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
 import com.example.tutorialmod.tags.ModBlockTags;
+import com.example.tutorialmod.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -32,6 +33,7 @@ public class TutorialMod implements ModInitializer {
 		ModItemGroups.registeredItemGroups();
 		ModBlocks.registeredModBlocks();
 		ModBlockTags.registeredModBlockTags();
+		ModLootTableModifiers.ModifyLootTable();
 
 		//api的写法
 		//FuelRegistry.INSTANCE.add(ModItems.FIRE_GEMSTONE, 1600);
