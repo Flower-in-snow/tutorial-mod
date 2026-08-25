@@ -50,6 +50,7 @@ public class ModItemGroups {
                     entries.add(ModBlocks.ICE_SPRAY_WALL);
                     entries.add(ModBlocks.ICE_SPRAY_DOOR);
                     entries.add(ModBlocks.ICE_SPRAY_TRAPDOOR);
+                    entries.add(ModItems.HAT);
                 })
                         .build()
                 );

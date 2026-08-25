@@ -4,12 +4,11 @@ import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
 import com.example.tutorialmod.item.custom.ModArmorItem;
-import com.example.tutorialmod.item.custom.Pickonimbus;
+import com.example.tutorialmod.item.custom.Bingonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
-import org.w3c.dom.Text;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -47,6 +46,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_SPRAY_STAIRS, "Ice Spray Stairs");
         translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "Ice Spray Slab");
         translationBuilder.add(ModItems.PLATE, "Plate");
+        translationBuilder.add(ModItems.HAT, "Hat");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 
@@ -54,7 +54,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(Prospector.KEY_ROUGH, " is over there!");
         translationBuilder.add(Prospector.Tooltip, "A Magic Wand for Precious Ores. Hold §5Shift§r for Precise Search");
         translationBuilder.add(Prospector.Basic_tooltip, "Hold §5CTRL§r for More Information");
-        translationBuilder.add(Pickonimbus.Tooltip, "A powerful tool that §2doesn't§r seem to break");
+        translationBuilder.add(Bingonimbus.Tooltip, "A powerful tool that §2doesn't§r seem to break");
         translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_1, "§6FULL SET BONUS: Mist Aura (§r§e%d§r§6/4)§r");
         translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_2, "§8Hides the wearer in a guise of mist,§r");
         translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_3, "§8granting a strong mist aura.§r");

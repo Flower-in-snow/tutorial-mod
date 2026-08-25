@@ -3,7 +3,7 @@ package com.example.tutorialmod.datagen;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
-import com.example.tutorialmod.item.custom.Pickonimbus;
+import com.example.tutorialmod.item.custom.Bingonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -45,12 +45,13 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_SPRAY_STAIRS, "冰霜楼梯");
         translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "冰霜台阶");
         translationBuilder.add(ModItems.PLATE, "盘子");
+        translationBuilder.add(ModItems.HAT, "帽子");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");
         translationBuilder.add(Prospector.Tooltip, "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找");
         translationBuilder.add(Prospector.Basic_tooltip, "按住§5CTRL§r查看更多信息");
-        translationBuilder.add(Pickonimbus.Tooltip, "一种强大的镐子似乎§6不会§r损坏");
+        translationBuilder.add(Bingonimbus.Tooltip, "一种强大的镐子似乎§6不会§r损坏");
     }
 }

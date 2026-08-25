@@ -2,8 +2,9 @@ package com.example.tutorialmod.item;
 
 import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.block.ModBlocks;
+import com.example.tutorialmod.item.custom.HatItem;
 import com.example.tutorialmod.item.custom.ModArmorItem;
-import com.example.tutorialmod.item.custom.Pickonimbus;
+import com.example.tutorialmod.item.custom.Bingonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -35,7 +36,7 @@ public class ModItems {
     public static final Item PLATE = registeredItems("plate", new Item(new Item.Settings()));
 
     public static final Item BINGONIMBUS_2000 = registeredItems("bingonimbus_2000",
-            new Pickonimbus(ModToolMaterials.BINGONIMBUS_2000, new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false))
+            new Bingonimbus(ModToolMaterials.BINGONIMBUS_2000, new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false))
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BINGONIMBUS_2000, 29.0f, -2.8f))));
 
     public static final Item SORROW_HELMET = registeredItems("sorrow_helmet",
@@ -53,6 +54,9 @@ public class ModItems {
     public static final Item SORROW_BOOTS = registeredItems("sorrow_boots",
             new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.BOOTS,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
+
+    public static final Item HAT = registeredItems("hat",
+            new HatItem(HatItem.Type.HAT, new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).maxCount(1)));
 
     //    这里的ModFoodComponentsItem是我自己写的一个类，继承了Item类，重写了getMaxUseTime方法
     public static void addItemtoIngredients(FabricItemGroupEntries fabricItemGroupEntries){

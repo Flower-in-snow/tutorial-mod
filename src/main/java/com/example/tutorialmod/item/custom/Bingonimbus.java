@@ -8,9 +8,9 @@ import net.minecraft.text.Text;
 
 import java.util.List;
 
-public class Pickonimbus extends PickaxeItem {
+public class Bingonimbus extends PickaxeItem {
 
-    public Pickonimbus(ToolMaterial material, Settings settings) {
+    public Bingonimbus(ToolMaterial material, Settings settings) {
         super(material, settings);
     }
 
