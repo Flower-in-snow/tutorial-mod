@@ -3,6 +3,7 @@ package com.example.tutorialmod;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.sound.ModSoundEvents;
 import com.example.tutorialmod.tags.ModBlockTags;
 import com.example.tutorialmod.util.ModCustomTrades;
 import com.example.tutorialmod.util.ModLootTableModifiers;
@@ -37,6 +38,7 @@ public class TutorialMod implements ModInitializer {
 		ModLootTableModifiers.ModifyLootTable();
 		ModCustomTrades.registerModCustomTrades();
 		ModCustomVillagers.registerCustomVillagers();
+		ModSoundEvents.registerModSoundEvents();
 
 		//api的写法
 		//FuelRegistry.INSTANCE.add(ModItems.FIRE_GEMSTONE, 1600);

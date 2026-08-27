@@ -31,6 +31,12 @@
   "itemGroup.tutorialmod.tutorial": "Tutorial Group",
   "message.tutorialmod.prospector.keyprecise": "Successfully Found ",
   "message.tutorialmod.prospector.keyrough": " is over there!",
+  "sounds.tutorialmod.gemstone_block_break": "Gemstone Block Break",
+  "sounds.tutorialmod.gemstone_block_fall": "Gemstone Block Fall",
+  "sounds.tutorialmod.gemstone_block_hit": "Gemstone Block Hit",
+  "sounds.tutorialmod.gemstone_block_place": "Gemstone Block Place",
+  "sounds.tutorialmod.gemstone_block_step": "Gemstone Block Step",
+  "sounds.tutorialmod.prospector_found_ore": "Prospector Found Ore",
   "tooltip.tutorialmod.sorrow_armor_1": "§6FULL SET BONUS: Mist Aura (§r§e%d§r§6/4)§r",
   "tooltip.tutorialmod.sorrow_armor_2": "§8Hides the wearer in a guise of mist,§r",
   "tooltip.tutorialmod.sorrow_armor_3": "§8granting a strong mist aura.§r"

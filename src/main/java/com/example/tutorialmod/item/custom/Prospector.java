@@ -1,5 +1,6 @@
 package com.example.tutorialmod.item.custom;
 
+import com.example.tutorialmod.sound.ModSoundEvents;
 import com.example.tutorialmod.tags.ModBlockTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
@@ -9,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -43,6 +45,7 @@ public class Prospector extends Item {
                     if (blockState != null) {
                         String name = blockState.getBlock().getTranslationKey();
                         player.sendMessage(Text.translatable(KEY_PRECISE).append(Text.translatable(name)));
+                        world.playSound(null, TargetPos, ModSoundEvents.PROSPECTOR_FOUND_ORE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                         isFound = true;
                         break;
                     }
@@ -57,6 +60,7 @@ public class Prospector extends Item {
                             if (blockState != null) {
                                 String name = blockState.getBlock().getTranslationKey();
                                 player.sendMessage(Text.translatable(name).append(Text.translatable(KEY_ROUGH)));
+                                world.playSound(null, TargetPos, ModSoundEvents.PROSPECTOR_FOUND_ORE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                                 isFound = true;
                                 break;
                             }

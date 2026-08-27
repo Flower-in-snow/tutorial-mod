@@ -30,5 +30,11 @@
   "item.tutorialmod.sorrow_leggings": "悲伤护腿",
   "itemGroup.tutorialmod.tutorial": "教程组",
   "message.tutorialmod.prospector.keyprecise": "成功找到 ",
-  "message.tutorialmod.prospector.keyrough": " 就在那！"
+  "message.tutorialmod.prospector.keyrough": " 就在那！",
+  "sounds.tutorialmod.gemstone_block_break": "宝石方块破坏",
+  "sounds.tutorialmod.gemstone_block_fall": "宝石方块坠落",
+  "sounds.tutorialmod.gemstone_block_hit": "宝石方块击中",
+  "sounds.tutorialmod.gemstone_block_place": "宝石方块放置",
+  "sounds.tutorialmod.gemstone_block_step": "宝石方块步履",
+  "sounds.tutorialmod.prospector_found_ore": "探矿器找到了矿石"
 }

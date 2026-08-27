@@ -35,6 +35,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.SORROW_LEGGINGS, "悲伤护腿");
         translationBuilder.add(ModItems.SORROW_BOOTS, "悲伤靴子");
 
+
         translationBuilder.add(ModBlocks.ICE_SPRAY_BUTTON, "冰霜按钮");
         translationBuilder.add(ModBlocks.ICE_SPRAY_PRESSURE_PLATE, "冰霜压力板");
         translationBuilder.add(ModBlocks.ICE_SPRAY_FENCE, "冰霜栅栏");
@@ -50,6 +51,12 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
 
         translationBuilder.add("entity.minecraft.villager.magician", "魔术师");
+        translationBuilder.add("sounds.tutorialmod.prospector_found_ore", "探矿器找到了矿石");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_break", "宝石方块破坏");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_step", "宝石方块步履");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_place", "宝石方块放置");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_hit", "宝石方块击中");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_fall", "宝石方块坠落");
 
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");

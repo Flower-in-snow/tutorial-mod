@@ -1,6 +1,7 @@
 package com.example.tutorialmod.block;
 
 import com.example.tutorialmod.TutorialMod;
+import com.example.tutorialmod.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
@@ -10,8 +11,15 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static final Block ICE_SPRAY_ORE = register("ice_spray_ore", new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASS).requiresTool().strength(4.5f, 6.0f)));
-    public static final Block ICE_SPRAY_BLOCK = register("ice_spray_block", new Block(AbstractBlock.Settings.create().instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(3.0f, 3.0f)));
+    public static final Block ICE_SPRAY_ORE = register("ice_spray_ore", new Block(AbstractBlock.Settings.create()
+            .instrument(NoteBlockInstrument.BASS)
+            .requiresTool()
+            .strength(4.5f, 6.0f)));
+    public static final Block ICE_SPRAY_BLOCK = register("ice_spray_block", new Block(AbstractBlock.Settings.create()
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresTool()
+            .strength(3.0f, 3.0f)
+            .sounds(ModSoundEvents.GEMSTONE_BLOCK)));
 
     public static final Block ICE_SPRAY_STAIRS = register("ice_spray_stairs",
             new StairsBlock(ICE_SPRAY_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(ICE_SPRAY_BLOCK)));

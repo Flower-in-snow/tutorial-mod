@@ -51,6 +51,12 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 
         translationBuilder.add("entity.minecraft.villager.magician", "Magician");
+        translationBuilder.add("sounds.tutorialmod.prospector_found_ore", "Prospector Found Ore");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_break", "Gemstone Block Break");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_step", "Gemstone Block Step");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_place", "Gemstone Block Place");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_hit", "Gemstone Block Hit");
+        translationBuilder.add("sounds.tutorialmod.gemstone_block_fall", "Gemstone Block Fall");
 
         translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");
         translationBuilder.add(Prospector.KEY_ROUGH, " is over there!");
