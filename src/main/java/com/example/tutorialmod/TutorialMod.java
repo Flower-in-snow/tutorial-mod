@@ -6,6 +6,7 @@ import com.example.tutorialmod.item.ModItems;
 import com.example.tutorialmod.tags.ModBlockTags;
 import com.example.tutorialmod.util.ModCustomTrades;
 import com.example.tutorialmod.util.ModLootTableModifiers;
+import com.example.tutorialmod.villager.ModCustomVillagers;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -30,12 +31,13 @@ public class TutorialMod implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
-		ModItems.registeredModItems();
-		ModItemGroups.registeredItemGroups();
-		ModBlocks.registeredModBlocks();
-		ModBlockTags.registeredModBlockTags();
+		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
+		ModBlocks.registerModBlocks();
+		ModBlockTags.registerModBlockTags();
 		ModLootTableModifiers.ModifyLootTable();
 		ModCustomTrades.registerModCustomTrades();
+		ModCustomVillagers.registerCustomVillagers();
 
 		//api的写法
 		//FuelRegistry.INSTANCE.add(ModItems.FIRE_GEMSTONE, 1600);

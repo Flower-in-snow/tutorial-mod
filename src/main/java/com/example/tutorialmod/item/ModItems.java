@@ -96,7 +96,7 @@ public class ModItems {
         fabricItemGroupEntries.add(BINGONIMBUS_2000);
     }
 
-    public static void registeredModItems(){
+    public static void registerModItems(){
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemtoIngredients);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemtoNatural);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemtoCombat);

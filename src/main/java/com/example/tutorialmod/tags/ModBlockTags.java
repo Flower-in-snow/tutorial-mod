@@ -13,7 +13,7 @@ public class ModBlockTags {
         return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TutorialMod.MOD_ID, id));
     }
 
-    public static void registeredModBlockTags(){
+    public static void registerModBlockTags(){
         TutorialMod.LOGGER.info("Registered ModBlockTags!");
     }
 }

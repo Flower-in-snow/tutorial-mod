@@ -19,7 +19,7 @@ public class ModItemGroups {
     private static RegistryKey<ItemGroup> register(String id) {//创建一个物品栏的唯一key的方法
         return RegistryKey.of(RegistryKeys.ITEM_GROUP, Identifier.of(TutorialMod.MOD_ID,id));
     }
-    public static void registeredItemGroups(){//注册物品栏的方法
+    public static void registerItemGroups(){//注册物品栏的方法
         Registry.register(Registries.ITEM_GROUP, TUTORIAL_GROUP, ItemGroup.create(ItemGroup.Row.TOP,7)
                         //第二个参数有两种写法，可以是key可以是Identifier id
                 .displayName(Text.translatable("itemGroup.tutorialmod.tutorial"))//这里的key可以在lang文件里定义，随便写

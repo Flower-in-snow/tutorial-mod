@@ -54,7 +54,7 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, id), block);//注册成方块
     }
 
-    public static void registeredModBlocks() {
+    public static void registerModBlocks() {
         TutorialMod.LOGGER.info("Registering Blocks");
     }
 }

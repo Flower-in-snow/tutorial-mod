@@ -1,4 +1,4 @@
-// 1.21	2026-08-25T11:42:48.5982526	TutorialMod/Recipes
+// 1.21	2026-08-27T14:31:58.1785075	TutorialMod/Recipes
 967236edc73e87d39cf9f162bb3dca61686a302a data\tutorialmod\advancement\recipes\combat\sorrow_to_sorrow_leggings.json
 b8a1c5fe5c0ca46aefd091e304b8fb517c0562c4 data\tutorialmod\advancement\recipes\combat\sorrow_to_sorrow_helmet.json
 00f5a1d25ed0d9d390ec9d3a7e406549d3c17acc data\tutorialmod\advancement\recipes\redstone\ice_spray_trapdoor.json
@@ -15,8 +15,8 @@ dc4330e02ce126a1eb09e64cd84042000ff8b277 data\tutorialmod\recipe\raw_ice_spray_g
 c14809e994c99a228afb12d15587e0c22f09d330 data\tutorialmod\recipe\raw_gemstone_to_ice_spray_gemstone.json
 e7d91f3befccf8cc21cdf225732d375f920af296 data\tutorialmod\advancement\recipes\decorations\ice_spray_wall.json
 e34301e667f21f0fe9018edae43790a36a45a499 data\tutorialmod\advancement\recipes\building_blocks\ice_spray_stairs.json
-5da2e7fb3ce1060394e03ec0b2d98f4ba5b9af7f data\tutorialmod\advancement\recipes\redstone\ice_spray_fence_gate.json
 b4eda43cf03113d3d8d259485745d46b765d9aa1 data\tutorialmod\advancement\recipes\redstone\ice_spray_button.json
+5da2e7fb3ce1060394e03ec0b2d98f4ba5b9af7f data\tutorialmod\advancement\recipes\redstone\ice_spray_fence_gate.json
 7d537ad36305ae6590703867800485ad5112d39e data\tutorialmod\recipe\sorrow_to_sorrow_leggings.json
 3f5cfb901a20a8981aecf875ce50b19f6e1b84a1 data\tutorialmod\recipe\raw_ice_spray_gemstone_from_blasting_ice_spray_ore.json
 f2932cc2a69aa83047abc39caf7ed1b7ee5ed9c6 data\tutorialmod\recipe\ice_spray_block.json
