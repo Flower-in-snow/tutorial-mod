@@ -4,7 +4,6 @@ import com.example.tutorialmod.item.ModItems;
 import com.example.tutorialmod.villager.ModCustomVillagers;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.village.TradeOffers;
-import net.minecraft.village.VillagerProfession;
 
 public class ModCustomTrades {
     public static void registerModCustomTrades() {

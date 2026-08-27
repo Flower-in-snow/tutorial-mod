@@ -1,18 +1,14 @@
 package com.example.tutorialmod.datagen;
 
-import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
 import com.example.tutorialmod.item.custom.ModArmorItem;
 import com.example.tutorialmod.item.custom.Bingonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
-import com.example.tutorialmod.villager.ModCustomVillagers;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.network.packet.CustomPayload;
 import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 

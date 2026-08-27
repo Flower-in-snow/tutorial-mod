@@ -9,7 +9,6 @@ import com.example.tutorialmod.util.ModLootTableModifiers;
 import com.example.tutorialmod.villager.ModCustomVillagers;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
