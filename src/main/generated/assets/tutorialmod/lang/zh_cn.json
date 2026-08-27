@@ -17,6 +17,7 @@
   "item.tutorialmod.ice_essence": "冰霜精华",
   "item.tutorialmod.ice_spray_gemstone": "冰霜宝石",
   "item.tutorialmod.ice_spray_wand": "冰霜法杖",
+  "item.tutorialmod.music_disc_love_2000": "音乐唱片 - 遠野ひかる - LOVE 2000_H",
   "item.tutorialmod.pickonimbus.tooltip": "一种强大的镐子似乎§6不会§r损坏",
   "item.tutorialmod.plate": "盘子",
   "item.tutorialmod.prospector": "§4探矿器§r",
@@ -29,6 +30,7 @@
   "item.tutorialmod.sorrow_helmet": "悲伤头盔",
   "item.tutorialmod.sorrow_leggings": "悲伤护腿",
   "itemGroup.tutorialmod.tutorial": "教程组",
+  "jukebox_song.tutorialmod.love_2000": "音乐唱片 - 遠野ひかる - LOVE 2000_H",
   "message.tutorialmod.prospector.keyprecise": "成功找到 ",
   "message.tutorialmod.prospector.keyrough": " 就在那！",
   "sounds.tutorialmod.gemstone_block_break": "宝石方块破坏",
@@ -36,5 +38,6 @@
   "sounds.tutorialmod.gemstone_block_hit": "宝石方块击中",
   "sounds.tutorialmod.gemstone_block_place": "宝石方块放置",
   "sounds.tutorialmod.gemstone_block_step": "宝石方块步履",
+  "sounds.tutorialmod.music_disc_love_2000": "音乐唱片 - 遠野ひかる - LOVE 2000_H",
   "sounds.tutorialmod.prospector_found_ore": "探矿器找到了矿石"
 }

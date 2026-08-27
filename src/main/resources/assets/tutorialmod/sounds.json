@@ -1,5 +1,5 @@
 {
-  "prosepctor_found_ore": {
+  "prospector_found_ore": {
     "subtitle": "sounds.tutorialmod.prospector_found_ore",
     "sounds": [
       "tutorialmod:prospector_found_ore"
@@ -33,6 +33,12 @@
     "subtitle": "sounds.tutorialmod.gemstone_block_fall",
     "sounds": [
       "tutorialmod:gemstone_block_fall"
+    ]
+  },
+  "music_disc_love_2000": {
+    "subtitle": "sounds.tutorialmod.music_disc_love_2000",
+    "sounds": [
+      "tutorialmod:love_2000"
     ]
   }
 }

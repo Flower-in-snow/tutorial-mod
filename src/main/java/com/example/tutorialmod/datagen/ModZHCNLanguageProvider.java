@@ -47,6 +47,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "冰霜台阶");
         translationBuilder.add(ModItems.PLATE, "盘子");
         translationBuilder.add(ModItems.HAT, "帽子");
+        translationBuilder.add(ModItems.MUSIC_DISC_LOVE_2000, "音乐唱片 - 遠野ひかる - LOVE 2000_H");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
 
@@ -57,6 +58,8 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("sounds.tutorialmod.gemstone_block_place", "宝石方块放置");
         translationBuilder.add("sounds.tutorialmod.gemstone_block_hit", "宝石方块击中");
         translationBuilder.add("sounds.tutorialmod.gemstone_block_fall", "宝石方块坠落");
+        translationBuilder.add("jukebox_song.tutorialmod.love_2000", "音乐唱片 - 遠野ひかる - LOVE 2000_H");
+        translationBuilder.add("sounds.tutorialmod.music_disc_love_2000", "音乐唱片 - 遠野ひかる - LOVE 2000_H");
 
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");

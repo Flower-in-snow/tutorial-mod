@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/template_music_disc",
+  "textures": {
+    "layer0": "tutorialmod:item/music_disc_love_2000"
+  }
+}

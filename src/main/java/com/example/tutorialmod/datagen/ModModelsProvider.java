@@ -42,6 +42,8 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BINGONIMBUS_2000, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PROSPECTOR, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.MUSIC_DISC_LOVE_2000, Models.TEMPLATE_MUSIC_DISC);
+
         //盔甲也不一样
         itemModelGenerator.registerArmor((ArmorItem) ModItems.SORROW_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.SORROW_CHESTPLATE);

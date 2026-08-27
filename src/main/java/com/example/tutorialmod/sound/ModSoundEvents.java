@@ -3,6 +3,7 @@ package com.example.tutorialmod.sound;
 import com.example.tutorialmod.TutorialMod;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
@@ -21,6 +22,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent GEMSTONE_BLOCK_FALL = register("gemstone_block_fall");
 
+    public static final RegistryEntry.Reference<SoundEvent> MUSIC_DISC_LOVE_2000 = registerReference("music_disc_love_2000");
+
     public static final BlockSoundGroup GEMSTONE_BLOCK = new BlockSoundGroup(1.0F, 1.0F,
             GEMSTONE_BLOCK_BREAK,
             GEMSTONE_BLOCK_STEP,
@@ -34,6 +37,10 @@ public class ModSoundEvents {
         return Registry.register(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));
     }
 
+    private static RegistryEntry.Reference<SoundEvent> registerReference(String id){
+        Identifier identifier = Identifier.of(TutorialMod.MOD_ID, id);
+        return Registry.registerReference(Registries.SOUND_EVENT, identifier, SoundEvent.of(identifier));
+    }
     public static void registerModSoundEvents(){
 
     }

@@ -20,5 +20,8 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SORROW_CHESTPLATE)
                 .add(ModItems.SORROW_LEGGINGS)
                 .add(ModItems.SORROW_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
+                .add(ModItems.MUSIC_DISC_LOVE_2000);
     }
 }

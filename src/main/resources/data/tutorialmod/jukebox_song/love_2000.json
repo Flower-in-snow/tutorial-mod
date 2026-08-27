@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "description": {
+    "translate": "jukebox_song.tutorialmod.love_2000"
+  },
+  "length_in_seconds": 263.0,
+  "sound_event": "tutorialmod:music_disc_love_2000"
+}
