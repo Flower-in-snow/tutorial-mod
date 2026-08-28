@@ -1,4 +1,5 @@
 {
+  "block.tutorialmod.box": "Box",
   "block.tutorialmod.ice_spray_block": "Ice Spray Block",
   "block.tutorialmod.ice_spray_button": "Ice Spray Button",
   "block.tutorialmod.ice_spray_door": "Ice Spray Door",
@@ -10,6 +11,7 @@
   "block.tutorialmod.ice_spray_stairs": "Ice Spray Stairs",
   "block.tutorialmod.ice_spray_trapdoor": "Ice Spray Trapdoor",
   "block.tutorialmod.ice_spray_wall": "Ice Spray Wall",
+  "container.box": "Box",
   "entity.minecraft.villager.magician": "Magician",
   "item.tutorialmod.bingonimbus_2000": "§5Bingonimbus 2000§r",
   "item.tutorialmod.fire_gemstone": "Fire Gemstone",
@@ -17,7 +19,7 @@
   "item.tutorialmod.ice_essence": "Ice Essence",
   "item.tutorialmod.ice_spray_gemstone": "Ice Spray Gemstone",
   "item.tutorialmod.ice_spray_wand": "§6Ice Spray Wand§r",
-  "item.tutorialmod.music_disc_love_2000": "Music Disc - 遠野ひかる - LOVE 2000_H",
+  "item.tutorialmod.music_disc_love_2000": "Music Disc",
   "item.tutorialmod.pickonimbus.tooltip": "A powerful tool that §2doesn't§r seem to break",
   "item.tutorialmod.plate": "Plate",
   "item.tutorialmod.prospector": "§4Prospector§r",

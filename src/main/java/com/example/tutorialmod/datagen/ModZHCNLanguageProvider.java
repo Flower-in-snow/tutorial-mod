@@ -48,7 +48,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PLATE, "盘子");
         translationBuilder.add(ModItems.HAT, "帽子");
         translationBuilder.add(ModItems.MUSIC_DISC_LOVE_2000, "音乐唱片 - 遠野ひかる - LOVE 2000_H");
-
+        translationBuilder.add(ModBlocks.BOX, "箱子");
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
 
         translationBuilder.add("entity.minecraft.villager.magician", "魔术师");
@@ -60,6 +60,7 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("sounds.tutorialmod.gemstone_block_fall", "宝石方块坠落");
         translationBuilder.add("jukebox_song.tutorialmod.love_2000", "音乐唱片 - 遠野ひかる - LOVE 2000_H");
         translationBuilder.add("sounds.tutorialmod.music_disc_love_2000", "音乐唱片 - 遠野ひかる - LOVE 2000_H");
+        translationBuilder.add("container.box", "箱子");
 
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");

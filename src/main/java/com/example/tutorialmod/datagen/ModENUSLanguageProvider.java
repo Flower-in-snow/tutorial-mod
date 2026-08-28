@@ -45,6 +45,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_SPRAY_TRAPDOOR, "Ice Spray Trapdoor");
         translationBuilder.add(ModBlocks.ICE_SPRAY_STAIRS, "Ice Spray Stairs");
         translationBuilder.add(ModBlocks.ICE_SPRAY_SLAB, "Ice Spray Slab");
+        translationBuilder.add(ModBlocks.BOX, "Box");
         translationBuilder.add(ModItems.PLATE, "Plate");
         translationBuilder.add(ModItems.HAT, "Hat");
         translationBuilder.add(ModItems.MUSIC_DISC_LOVE_2000, "Music Disc");
@@ -60,6 +61,8 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("sounds.tutorialmod.gemstone_block_fall", "Gemstone Block Fall");
         translationBuilder.add("jukebox_song.tutorialmod.love_2000", "Music Disc - 遠野ひかる - LOVE 2000_H");
         translationBuilder.add("sounds.tutorialmod.misc_disc_love_2000", "Music Disc - 遠野ひかる - LOVE 2000_H");
+        translationBuilder.add("container.box", "Box");
+
 
         translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");
         translationBuilder.add(Prospector.KEY_ROUGH, " is over there!");

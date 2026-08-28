@@ -1,6 +1,8 @@
 package com.example.tutorialmod.block;
 
 import com.example.tutorialmod.TutorialMod;
+import com.example.tutorialmod.block.custom.BoxBlock;
+import com.example.tutorialmod.block.entity.ModBlockEntities;
 import com.example.tutorialmod.sound.ModSoundEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -8,6 +10,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
@@ -48,6 +51,8 @@ public class ModBlocks {
     public static final Block ICE_SPRAY_TRAPDOOR = register("ice_spray_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(ICE_SPRAY_BLOCK).nonOpaque()));
 
+
+    public static final Block BOX = register("box", new BoxBlock(AbstractBlock.Settings.create().mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).strength(2.5F).sounds(BlockSoundGroup.METAL).nonOpaque(), () -> ModBlockEntities.BOX));
     //调用方法注册
     //下方是注册的两个方法
     public static void registeredBlockItems(String id, Block block){

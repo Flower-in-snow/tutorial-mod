@@ -41,6 +41,7 @@ public class ModItemGroups {
                     entries.add(ModItems.SORROW_LEGGINGS);
                     entries.add(ModItems.SORROW_BOOTS);
                     entries.add(ModItems.MUSIC_DISC_LOVE_2000);
+                    entries.add(ModBlocks.BOX);
 
                     entries.add(ModBlocks.ICE_SPRAY_STAIRS);
                     entries.add(ModBlocks.ICE_SPRAY_SLAB);
