@@ -22,6 +22,8 @@ public class ModSoundEvents {
 
     public static final SoundEvent GEMSTONE_BLOCK_FALL = register("gemstone_block_fall");
 
+    public static final SoundEvent ICE_SPRAY = register("ice_spray");//未登记
+
     public static final RegistryEntry.Reference<SoundEvent> MUSIC_DISC_LOVE_2000 = registerReference("music_disc_love_2000");
 
     public static final BlockSoundGroup GEMSTONE_BLOCK = new BlockSoundGroup(1.0F, 1.0F,
