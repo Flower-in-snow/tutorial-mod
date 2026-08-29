@@ -46,5 +46,21 @@
     "sounds": [
       "tutorialmod:ice_spray"
     ]
+  },
+  "teleport": {
+    "subtitle": "sounds.tutorialmod.teleport",
+    "sounds": [
+      "tutorialmod:teleport_1",
+      "tutorialmod:teleport_2"
+    ]
+  },
+  "explode": {
+    "subtitle": "sounds.tutorialmod.explode",
+    "sounds": [
+      "tutorialmod:explode_1",
+      "tutorialmod:explode_2",
+      "tutorialmod:explode_3",
+      "tutorialmod:explode_4"
+    ]
   }
 }

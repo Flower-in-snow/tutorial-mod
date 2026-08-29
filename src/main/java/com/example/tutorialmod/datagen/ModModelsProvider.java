@@ -42,6 +42,7 @@ public class ModModelsProvider extends FabricModelProvider {
         //工具为手持物品形式
         itemModelGenerator.register(ModItems.BINGONIMBUS_2000, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PROSPECTOR, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.HYPERION, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.MUSIC_DISC_LOVE_2000, Models.TEMPLATE_MUSIC_DISC);
 

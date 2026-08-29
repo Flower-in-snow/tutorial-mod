@@ -24,7 +24,7 @@ public class ModItems {
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), item);
     }
     public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new IceSprayWand(new Item.Settings()
-            .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).rarity(Rarity.EPIC)));//  创造新物品
+            .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).rarity(Rarity.EPIC).maxCount(1)));//  创造新物品
     public static final Item RAW_ICE_SPRAY_GEMSTONE = registeredItems("raw_ice_spray_gemstone", new Item(new Item.Settings()));
     public static final Item ICE_SPRAY_GEMSTONE = registeredItems("ice_spray_gemstone", new Item(new Item.Settings()));
     public static final Item FIRE_GEMSTONE = registeredItems("fire_gemstone", new Item(new Item.Settings().fireproof()));
@@ -58,6 +58,10 @@ public class ModItems {
 
     public static final Item HAT = registeredItems("hat",
             new HatItem(HatItem.Type.HAT, new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).maxCount(1)));
+
+    public static final Item HYPERION = registeredItems("hyperion", new Hyperion(ModToolMaterials.HYPERION, new Item.Settings()
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.HYPERION, 14, -2.4F))
+            .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof()));
 
     //    这里的ModFoodComponentsItem是我自己写的一个类，继承了Item类，重写了getMaxUseTime方法
     public static void addItemtoIngredients(FabricItemGroupEntries fabricItemGroupEntries){

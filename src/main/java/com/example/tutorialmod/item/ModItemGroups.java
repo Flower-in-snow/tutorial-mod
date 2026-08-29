@@ -29,6 +29,7 @@ public class ModItemGroups {
                     entries.add(ModItems.ICE_SPRAY_GEMSTONE);
                     entries.add(ModBlocks.ICE_SPRAY_ORE);
                     entries.add(ModItems.ICE_SPRAY_WAND);
+                    entries.add(ModItems.HYPERION);
                     entries.add(ModBlocks.ICE_SPRAY_BLOCK);
                     entries.add(ModItems.ICE_ESSENCE);
                     entries.add(ModItems.FIRE_GEMSTONE);

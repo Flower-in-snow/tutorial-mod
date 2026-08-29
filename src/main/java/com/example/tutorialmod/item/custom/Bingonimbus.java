@@ -14,12 +14,12 @@ public class Bingonimbus extends PickaxeItem {
         super(material, settings);
     }
 
-    public static final String Tooltip = "item.tutorialmod.pickonimbus.tooltip";
+    public static final String Bingoimbus_Tooltip_Line1 = "item.tutorialmod.pickonimbus.tooltip";
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         super.appendTooltip(stack, context, tooltip, type);
         tooltip.add(Text.translatable(Prospector.SPACE));
-        tooltip.add(Text.translatable(Tooltip));
+        tooltip.add(Text.translatable(Bingoimbus_Tooltip_Line1));
     }
 }
 

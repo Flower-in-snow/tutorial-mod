@@ -11,7 +11,9 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     BINGONIMBUS_2000(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 1999, 12.0F, 0.0F, 30,
-            () -> Ingredient.ofItems(ModItems.BINGONIMBUS_2000));
+            () -> Ingredient.ofItems(ModItems.BINGONIMBUS_2000)),
+    HYPERION(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 1999, 0.0F, 0.0F, 0,
+            () -> Ingredient.ofItems(ModItems.HYPERION));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

@@ -41,6 +41,6 @@
   "sounds.tutorialmod.ice_spray": "冰霜喷射",
   "sounds.tutorialmod.music_disc_love_2000": "音乐唱片 - 遠野ひかる - LOVE 2000_H",
   "sounds.tutorialmod.prospector_found_ore": "探矿器找到了矿石",
-  "tooltip.tutorialmod.prospector_basictooltip": "按住§5CTRL§r查看更多信息",
-  "tooltip.tutorialmod.prospector_tooltip": "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找"
+  "tooltip.tutorialmod.prospector_line1": "按住§5CTRL§r查看更多信息",
+  "tooltip.tutorialmod.prospector_line2": "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找"
 }

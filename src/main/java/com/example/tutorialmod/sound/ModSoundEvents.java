@@ -1,6 +1,7 @@
 package com.example.tutorialmod.sound;
 
 import com.example.tutorialmod.TutorialMod;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -22,7 +23,11 @@ public class ModSoundEvents {
 
     public static final SoundEvent GEMSTONE_BLOCK_FALL = register("gemstone_block_fall");
 
-    public static final SoundEvent ICE_SPRAY = register("ice_spray");//未登记
+    public static final SoundEvent ICE_SPRAY = register("ice_spray");
+
+    public static final SoundEvent TELEPORT = register("teleport");
+
+    public static final SoundEvent EXPLODE = register("explode");
 
     public static final RegistryEntry.Reference<SoundEvent> MUSIC_DISC_LOVE_2000 = registerReference("music_disc_love_2000");
 

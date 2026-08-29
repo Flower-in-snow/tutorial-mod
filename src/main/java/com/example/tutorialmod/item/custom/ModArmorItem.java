@@ -110,15 +110,15 @@ public class ModArmorItem extends ArmorItem {
                 leggings.getMaterial().value() == material &&
                 boots.getMaterial().value() == material;
     }
-    public static final String Sorrow_ArmorTip_1 = "tooltip.tutorialmod.sorrow_armor_1";
-    public static final String Sorrow_ArmorTip_2 = "tooltip.tutorialmod.sorrow_armor_2";
-    public static final String Sorrow_ArmorTip_3 = "tooltip.tutorialmod.sorrow_armor_3";
+    public static final String Sorrow_ArmorTip_Line1 = "tooltip.tutorialmod.sorrow_armor_1";
+    public static final String Sorrow_ArmorTip_Line2 = "tooltip.tutorialmod.sorrow_armor_2";
+    public static final String Sorrow_ArmorTip_Line3 = "tooltip.tutorialmod.sorrow_armor_3";
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable(Prospector.SPACE));
-        tooltip.add(Text.translatable(Sorrow_ArmorTip_1, count));
-        tooltip.add(Text.translatable(Sorrow_ArmorTip_2));
-        tooltip.add(Text.translatable(Sorrow_ArmorTip_3));
+        tooltip.add(Text.translatable(Sorrow_ArmorTip_Line1, count));
+        tooltip.add(Text.translatable(Sorrow_ArmorTip_Line2));
+        tooltip.add(Text.translatable(Sorrow_ArmorTip_Line3));
         super.appendTooltip(stack, context, tooltip, type);
     }
 }

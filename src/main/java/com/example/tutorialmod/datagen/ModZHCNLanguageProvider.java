@@ -66,10 +66,10 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");
 
-        translationBuilder.add(Prospector.Tooltip, "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找");
+        translationBuilder.add(Prospector.Prospector_Line2, "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找");
 
-        translationBuilder.add(Prospector.Basic_tooltip, "按住§5CTRL§r查看更多信息");
-        translationBuilder.add(Bingonimbus.Tooltip, "一种强大的镐子似乎§6不会§r损坏");
+        translationBuilder.add(Prospector.Prospector_Line1, "按住§5CTRL§r查看更多信息");
+        translationBuilder.add(Bingonimbus.Bingoimbus_Tooltip_Line1, "一种强大的镐子似乎§6不会§r损坏");
 
     }
 }
