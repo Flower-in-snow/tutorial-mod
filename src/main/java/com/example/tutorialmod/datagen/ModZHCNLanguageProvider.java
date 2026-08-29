@@ -61,11 +61,15 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("jukebox_song.tutorialmod.love_2000", "音乐唱片 - 遠野ひかる - LOVE 2000_H");
         translationBuilder.add("sounds.tutorialmod.music_disc_love_2000", "音乐唱片 - 遠野ひかる - LOVE 2000_H");
         translationBuilder.add("container.box", "箱子");
+        translationBuilder.add("sounds.tutorialmod.ice_spray", "冰霜喷射");
 
         translationBuilder.add(Prospector.KEY_PRECISE, "成功找到 ");
         translationBuilder.add(Prospector.KEY_ROUGH,  " 就在那！");
+
         translationBuilder.add(Prospector.Tooltip, "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找");
+
         translationBuilder.add(Prospector.Basic_tooltip, "按住§5CTRL§r查看更多信息");
         translationBuilder.add(Bingonimbus.Tooltip, "一种强大的镐子似乎§6不会§r损坏");
+
     }
 }

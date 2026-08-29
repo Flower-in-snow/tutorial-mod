@@ -115,6 +115,7 @@ public class ModArmorItem extends ArmorItem {
     public static final String Sorrow_ArmorTip_3 = "tooltip.tutorialmod.sorrow_armor_3";
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable(Prospector.SPACE));
         tooltip.add(Text.translatable(Sorrow_ArmorTip_1, count));
         tooltip.add(Text.translatable(Sorrow_ArmorTip_2));
         tooltip.add(Text.translatable(Sorrow_ArmorTip_3));

@@ -23,8 +23,6 @@
   "item.tutorialmod.pickonimbus.tooltip": "一种强大的镐子似乎§6不会§r损坏",
   "item.tutorialmod.plate": "盘子",
   "item.tutorialmod.prospector": "§4探矿器§r",
-  "item.tutorialmod.prospector.basictooltip": "按住§5CTRL§r查看更多信息",
-  "item.tutorialmod.prospector.tooltip": "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找",
   "item.tutorialmod.raw_ice_spray_gemstone": "原始冰霜宝石",
   "item.tutorialmod.sorrow": "悲伤",
   "item.tutorialmod.sorrow_boots": "悲伤靴子",
@@ -40,6 +38,9 @@
   "sounds.tutorialmod.gemstone_block_hit": "宝石方块击中",
   "sounds.tutorialmod.gemstone_block_place": "宝石方块放置",
   "sounds.tutorialmod.gemstone_block_step": "宝石方块步履",
+  "sounds.tutorialmod.ice_spray": "冰霜喷射",
   "sounds.tutorialmod.music_disc_love_2000": "音乐唱片 - 遠野ひかる - LOVE 2000_H",
-  "sounds.tutorialmod.prospector_found_ore": "探矿器找到了矿石"
+  "sounds.tutorialmod.prospector_found_ore": "探矿器找到了矿石",
+  "tooltip.tutorialmod.prospector_basictooltip": "按住§5CTRL§r查看更多信息",
+  "tooltip.tutorialmod.prospector_tooltip": "一种用于查找稀缺矿物的工具 按住§5shift§r来精确查找"
 }

@@ -93,11 +93,13 @@ public class Prospector extends Item {
         }
     }
     //添加工具信息
-    public static final String Tooltip = "item.tutorialmod.prospector.tooltip";
-    public static final String Basic_tooltip = "item.tutorialmod.prospector.basictooltip";
+    public static final String SPACE = "tooltip.tutorialmod.space";
+    public static final String Tooltip = "tooltip.tutorialmod.prospector_tooltip";
+    public static final String Basic_tooltip = "tooltip.tutorialmod.prospector_basictooltip";
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         super.appendTooltip(stack, context, tooltip, type);
+        tooltip.add(Text.translatable(SPACE));
         if (Screen.hasControlDown()){
             tooltip.add(Text.translatable(Tooltip));
         }

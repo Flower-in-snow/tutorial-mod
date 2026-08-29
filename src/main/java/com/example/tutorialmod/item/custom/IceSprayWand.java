@@ -1,14 +1,19 @@
 package com.example.tutorialmod.item.custom;
 
+import com.example.tutorialmod.effect.ModStatusEffects;
 import com.example.tutorialmod.sound.ModSoundEvents;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -19,13 +24,17 @@ import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Optional;
 
 public class IceSprayWand extends Item {
     private static final double RANGE = 20.0D;
-    private static final int COOLDOWN = 20;
-    private static final int ATTACKDAMAGE = 8;
+    private static final int COOLDOWN = 2;
+    private static final int ATTACK_DAMAGE = 8;
+    private static final double FROZEN_CHANCE = 0.5;
+    private static final int FROZEN_TIME = 20;
 
+    private record TargetHit(LivingEntity target, Vec3d hitPoint){}//新建一个record类型，可以让方法返回一个类型，取值直接取形参的值
 
     public IceSprayWand(Settings settings) {
         super(settings);
@@ -48,14 +57,15 @@ public class IceSprayWand extends Item {
                 endpoint = blockHitResult.getPos();
             }
 
-            Entity Target = findTarget(user,startpoint,endpoint);//这个方法判断这个方向上我们击中离我们最近的实体是哪个
+            TargetHit targetHit = findTarget(user,startpoint,endpoint);//这个方法判断这个方向上我们击中离我们最近的实体是哪个
 
-            if (Target != null){
-                Optional<Vec3d> hit = Target.getBoundingBox().raycast(startpoint, endpoint);
-                if (hit.isPresent()){
-                    endpoint = hit.get();//如果击中最近的实体，把向量终点改成击中的这个点，方便后续渲染
+            if (targetHit != null){
+                endpoint = targetHit.hitPoint();//如果击中最近的实体，把向量终点改成击中的这个点，方便后续渲染
+                targetHit.target().damage(world.getDamageSources().playerAttack(user), ATTACK_DAMAGE);
+                //接下来是随机数判断施加冰冻效果
+                if (world.random.nextFloat() < FROZEN_CHANCE){
+                    targetHit.target().addStatusEffect(new StatusEffectInstance(ModStatusEffects.FROZEN, FROZEN_TIME, 0, false, false, false));
                 }
-                Target.damage(world.getDamageSources().playerAttack(user), ATTACKDAMAGE);
             }
 
             if (world instanceof ServerWorld serverWorld){//在服务器端渲染粒子效果，需要获取目标离我们的距离
@@ -65,15 +75,14 @@ public class IceSprayWand extends Item {
                     serverWorld.spawnParticles(ParticleTypes.SNOWFLAKE, pos.x, pos.y, pos.z, 1, 0, 0, 0, 1.0F);
                 }
             }
-            //接下来是随机数判断施加冰冻效果
 
         }
         user.getItemCooldownManager().set(stack.getItem(), COOLDOWN);
         return  TypedActionResult.success(stack, false);
     }
 
-    private static @Nullable Entity findTarget(PlayerEntity user, Vec3d startpoint, Vec3d endpoint) {
-        Entity nearest = null;
+    private static @Nullable TargetHit findTarget(PlayerEntity user, Vec3d startpoint, Vec3d endpoint) {
+        TargetHit nearest = null;
         double nearestDistance = startpoint.distanceTo(endpoint);
         // expand(1.0)：放宽盒子的预筛选范围，只靠下面的碰撞箱raycast做精确判断
         for (Entity entity : user.getWorld().getOtherEntities(user, new Box(startpoint, endpoint).expand(1.0), entity -> entity instanceof LivingEntity && !entity.isSpectator() && entity.canHit())) {
@@ -81,11 +90,25 @@ public class IceSprayWand extends Item {
             if (hit.isPresent()) {//射线真的穿过了这个实体的碰撞箱
                 double distance = startpoint.distanceTo(hit.get());
                 if (distance < nearestDistance) {
-                    nearest = entity;
+                    nearest = new TargetHit((LivingEntity) entity, hit.get());
                     nearestDistance = distance;
                 }
             }
         }
         return nearest;
+    }
+
+    public static final String Ice_Spray_Wand_Tooltip_Line1 = "tooltip.tutorialmod.ice_spray_wand_line1";
+    public static final String Ice_Spray_Wand_Tooltip_Line2 = "tooltip.tutorialmod.ice_spray_wand_line2";
+    public static final String Ice_Spray_Wand_Tooltip_Line3 = "tooltip.tutorialmod.ice_spray_wand_line3";
+    public static final String Ice_Spray_Wand_Tooltip_Line4 = "tooltip.tutorialmod.ice_spray_wand_line4";
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        super.appendTooltip(stack, context, tooltip, type);
+        tooltip.add(Text.translatable(Prospector.SPACE));
+        tooltip.add(Text.translatable(Ice_Spray_Wand_Tooltip_Line1));
+        tooltip.add(Text.translatable(Ice_Spray_Wand_Tooltip_Line2));
+        tooltip.add(Text.translatable(Ice_Spray_Wand_Tooltip_Line3, Text.literal(String.valueOf(ATTACK_DAMAGE)).formatted(Formatting.RED)));
+        tooltip.add(Text.translatable(Ice_Spray_Wand_Tooltip_Line4, Text.literal(String.valueOf(FROZEN_TIME / 20)).formatted(Formatting.RED)));
     }
 }

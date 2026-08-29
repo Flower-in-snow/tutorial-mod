@@ -3,6 +3,7 @@ package com.example.tutorialmod.datagen;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.item.custom.IceSprayWand;
 import com.example.tutorialmod.item.custom.ModArmorItem;
 import com.example.tutorialmod.item.custom.Bingonimbus;
 import com.example.tutorialmod.item.custom.Prospector;
@@ -62,15 +63,25 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("jukebox_song.tutorialmod.love_2000", "Music Disc - 遠野ひかる - LOVE 2000_H");
         translationBuilder.add("sounds.tutorialmod.misc_disc_love_2000", "Music Disc - 遠野ひかる - LOVE 2000_H");
         translationBuilder.add("container.box", "Box");
+        translationBuilder.add("sounds.tutorialmod.ice_spray", "Ice Spray");
 
 
         translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");
         translationBuilder.add(Prospector.KEY_ROUGH, " is over there!");
+
+        translationBuilder.add(Prospector.SPACE, " ");
         translationBuilder.add(Prospector.Tooltip, "A Magic Wand for Precious Ores. Hold §5Shift§r for Precise Search");
+
         translationBuilder.add(Prospector.Basic_tooltip, "Hold §5CTRL§r for More Information");
         translationBuilder.add(Bingonimbus.Tooltip, "A powerful tool that §2doesn't§r seem to break");
-        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_1, "§6FULL SET BONUS: Mist Aura (§r§e%d§r§6/4)§r");
-        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_2, "§8Hides the wearer in a guise of mist,§r");
-        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_3, "§8granting a strong mist aura.§r");
+
+        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_1, "§6 FULL SET BONUS: Mist Aura ( §r §e%d§r §6/4) §r");
+        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_2, "§8 Hides the wearer in a guise of mist, §r");
+        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_3, "§8 granting a strong mist aura. §r");
+
+        translationBuilder.add(IceSprayWand.Ice_Spray_Wand_Tooltip_Line1, "§6Ability: Ice Spray§r §eRIGHT CLICK§r");
+        translationBuilder.add(IceSprayWand.Ice_Spray_Wand_Tooltip_Line2, "§8Produces a cone of ice in front of the caster§r");
+        translationBuilder.add(IceSprayWand.Ice_Spray_Wand_Tooltip_Line3, "§8that deals§r §c%s§r §8damage to mobs and freezes§r");
+        translationBuilder.add(IceSprayWand.Ice_Spray_Wand_Tooltip_Line4, "§8them in place for §r§c%s§r §8seconds!§r");
     }
 }

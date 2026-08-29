@@ -40,5 +40,11 @@
     "sounds": [
       "tutorialmod:love_2000"
     ]
+  },
+  "ice_spray": {
+    "subtitle": "sounds.tutorialmod.ice_spray",
+    "sounds": [
+      "tutorialmod:ice_spray"
+    ]
   }
 }
