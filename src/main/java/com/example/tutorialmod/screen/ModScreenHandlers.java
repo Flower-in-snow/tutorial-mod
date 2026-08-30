@@ -3,10 +3,8 @@ package com.example.tutorialmod.screen;
 import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.data.PolishingMachineData;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerType;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 

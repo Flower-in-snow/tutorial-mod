@@ -1,6 +1,5 @@
 package com.example.tutorialmod.screen;
 
-import com.example.tutorialmod.block.custom.PolishingMachine;
 import com.example.tutorialmod.block.entity.PolishingMachineBlockEntity;
 import com.example.tutorialmod.data.PolishingMachineData;
 import net.minecraft.block.entity.BlockEntity;
@@ -11,9 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
-import org.jetbrains.annotations.Nullable;
 
 public class PolishingMachineScreenHandler extends ScreenHandler {
     private final Inventory inventory;
