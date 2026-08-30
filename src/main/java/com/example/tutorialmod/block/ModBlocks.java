@@ -2,6 +2,7 @@ package com.example.tutorialmod.block;
 
 import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.block.custom.BoxBlock;
+import com.example.tutorialmod.block.custom.PolishingMachine;
 import com.example.tutorialmod.block.entity.ModBlockEntities;
 import com.example.tutorialmod.sound.ModSoundEvents;
 import net.minecraft.block.*;
@@ -50,6 +51,10 @@ public class ModBlocks {
 
     public static final Block ICE_SPRAY_TRAPDOOR = register("ice_spray_trapdoor",
             new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.copy(ICE_SPRAY_BLOCK).nonOpaque()));
+
+    public static final Block POLISHING_MACHINE = register("polishing_machine",
+            new PolishingMachine(AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASS)
+                    .strength(2.5F).sounds(BlockSoundGroup.STONE)));
 
 
     public static final Block BOX = register("box", new BoxBlock(AbstractBlock.Settings.create().mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).strength(2.5F).sounds(BlockSoundGroup.METAL).nonOpaque(), () -> ModBlockEntities.BOX));

@@ -26,5 +26,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ICE_SPRAY_WALL);
         addDrop(ModBlocks.ICE_SPRAY_DOOR, doorDrops(ModBlocks.ICE_SPRAY_DOOR));
         addDrop(ModBlocks.ICE_SPRAY_TRAPDOOR);
+        addDrop(ModBlocks.POLISHING_MACHINE);
     }
 }

@@ -48,6 +48,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PLATE, "Plate");
         translationBuilder.add(ModItems.HAT, "Hat");
         translationBuilder.add(ModItems.MUSIC_DISC_LOVE_2000, "Music Disc");
+        translationBuilder.add(ModBlocks.POLISHING_MACHINE, "Polishing Machine");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 
@@ -64,6 +65,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("sounds.tutorialmod.ice_spray", "Ice Spray");
         translationBuilder.add("sounds.tutorialmod.teleport", "Teleport");
         translationBuilder.add("sounds.tutorialmod.explode", "Explode");
+        translationBuilder.add("container.tutorialmod.polishing_machine", "Polishing Machine");
 
 
         translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");

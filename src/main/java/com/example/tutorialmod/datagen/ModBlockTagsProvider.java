@@ -19,11 +19,13 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.ICE_SPRAY_BLOCK)
-                .add(ModBlocks.ICE_SPRAY_ORE);
+                .add(ModBlocks.ICE_SPRAY_ORE)
+                .add(ModBlocks.POLISHING_MACHINE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ICE_SPRAY_BLOCK)
-                .add(ModBlocks.ICE_SPRAY_ORE);
+                .add(ModBlocks.ICE_SPRAY_ORE)
+                .add(ModBlocks.POLISHING_MACHINE);
 
         getOrCreateTagBuilder(ModBlockTags.PROSPECTOR_ORE_LIST)
                 .forceAddTag(BlockTags.DIAMOND_ORES)

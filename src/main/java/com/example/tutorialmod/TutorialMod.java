@@ -5,6 +5,7 @@ import com.example.tutorialmod.block.entity.ModBlockEntities;
 import com.example.tutorialmod.effect.ModStatusEffects;
 import com.example.tutorialmod.item.ModItemGroups;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.screen.ModScreenHandlers;
 import com.example.tutorialmod.sound.ModSoundEvents;
 import com.example.tutorialmod.tags.ModBlockTags;
 import com.example.tutorialmod.util.ModCustomTrades;
@@ -43,6 +44,7 @@ public class TutorialMod implements ModInitializer {
 		ModSoundEvents.registerModSoundEvents();
 		ModBlockEntities.registerModBlockEntities();
 		ModStatusEffects.registerModStatusEffects();
+		ModScreenHandlers.registerScreenHandlers();
 
 		//api的写法
 		//FuelRegistry.INSTANCE.add(ModItems.FIRE_GEMSTONE, 1600);
