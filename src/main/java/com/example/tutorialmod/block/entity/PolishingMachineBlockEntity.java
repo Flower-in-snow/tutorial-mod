@@ -1,7 +1,7 @@
 package com.example.tutorialmod.block.entity;
 
 import com.example.tutorialmod.data.PolishingMachineData;
-import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.recipe.PolishingMachineRecipe;
 import com.example.tutorialmod.screen.PolishingMachineScreenHandler;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.minecraft.block.BlockState;
@@ -9,9 +9,12 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.recipe.RecipeEntry;
+import net.minecraft.recipe.input.SingleStackRecipeInput;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -21,6 +24,8 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Optional;
 
 public class PolishingMachineBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<PolishingMachineData>, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
@@ -131,9 +136,23 @@ public class PolishingMachineBlockEntity extends BlockEntity implements Extended
     }
 
     private void craftItem() {
-        ItemStack itemStack = new ItemStack(ModItems.ICE_ESSENCE);
-        this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.ICE_ESSENCE, getStack(OUTPUT_SLOT).getCount() + itemStack.getCount()));
+//        ItemStack itemStack = new ItemStack(ModItems.ICE_ESSENCE);
+//        this.setStack(OUTPUT_SLOT, new ItemStack(ModItems.ICE_ESSENCE, getStack(OUTPUT_SLOT).getCount() + itemStack.getCount()));
+//        this.removeStack(INPUT_SLOT, 1);
+        Optional<RecipeEntry<PolishingMachineRecipe>> recipe = getCurrentRecipe();
+        this.setStack(OUTPUT_SLOT, new ItemStack(recipe.get().value().getResult(null).getItem(),
+                getStack(OUTPUT_SLOT).getCount() + recipe.get().value().getResult(null).getCount()));
+
         this.removeStack(INPUT_SLOT, 1);
+    }
+
+    private Optional<RecipeEntry<PolishingMachineRecipe>> getCurrentRecipe() {
+        SimpleInventory inventory = new SimpleInventory(this.size());
+        for (int i = 0; i < this.size(); i++) {
+            inventory.setStack(i, this.getStack(i));
+        }
+        return getWorld().getRecipeManager().getFirstMatch(PolishingMachineRecipe.Type.INSTANCE,
+                new SingleStackRecipeInput(inventory.getStack(INPUT_SLOT)), getWorld());
     }
 
     private boolean finishedCrafting() {
@@ -145,13 +164,16 @@ public class PolishingMachineBlockEntity extends BlockEntity implements Extended
     }
 
     private boolean hasRecipe() {
-        ItemStack itemStack = new ItemStack((ModItems.ICE_ESSENCE));
-        boolean hasInput = this.getStack(INPUT_SLOT).getItem() == Items.ICE;
-        return hasInput && canInsertAmountIntoOutputSlot(itemStack) && canInsertItemIntoOutputSlot(itemStack);
+//        ItemStack itemStack = new ItemStack((ModItems.ICE_ESSENCE));
+//        boolean hasInput = this.getStack(INPUT_SLOT).getItem() == Items.ICE;
+//        return hasInput && canInsertAmountIntoOutputSlot(itemStack) && canInsertItemIntoOutputSlot(itemStack);
+        Optional<RecipeEntry<PolishingMachineRecipe>> recipe = getCurrentRecipe();
+        return recipe.isPresent() && canInsertAmountIntoOutputSlot(recipe.get().value().getResult(null)) &&
+                canInsertItemIntoOutputSlot(recipe.get().value().getResult(null).getItem());
     }
 
-    private boolean canInsertItemIntoOutputSlot(ItemStack itemStack) {
-        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == itemStack.getItem();
+    private boolean canInsertItemIntoOutputSlot(Item item) {
+        return this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getItem() == item;
     }
 
     private boolean canInsertAmountIntoOutputSlot(ItemStack itemStack) {
