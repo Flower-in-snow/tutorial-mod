@@ -15,7 +15,6 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-import javax.sound.sampled.AudioFileFormat;
 import java.util.List;
 
 public class PolishingMachineRecipe implements Recipe<SingleStackRecipeInput> {
@@ -116,7 +115,7 @@ public class PolishingMachineRecipe implements Recipe<SingleStackRecipeInput> {
 
         public static final String ID = "polishing_machine";
 
-        public static final MapCodec<PolishingMachineRecipe> CODEC = RecordCodecBuilder.mapCodec(polishingMachineRecipeInstance ->polishingMachineRecipeInstance.group(
+        public static final MapCodec<PolishingMachineRecipe> CODEC = RecordCodecBuilder.mapCodec(polishingMachineRecipeInstance -> polishingMachineRecipeInstance.group(
                 Ingredient.DISALLOW_EMPTY_CODEC.listOf().fieldOf("ingredients").flatXmap(ingredients -> {
                     Ingredient[] ingredients1 = (Ingredient[]) ingredients.stream().filter(ingredient -> !ingredient.isEmpty()).toArray(Ingredient[]::new);
                     if (ingredients1.length == 0 ){
