@@ -24,8 +24,8 @@ public class ModModelsProvider extends FabricModelProvider {
                         .family(blockFamily));
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ICE_SPRAY_ORE);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.POLISHING_MACHINE);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.BOX);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.POLISHING_MACHINE);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.BOX);
 
     }
 

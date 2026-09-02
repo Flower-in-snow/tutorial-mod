@@ -1,12 +1,13 @@
-// 1.21	2026-08-30T19:15:10.8868289	TutorialMod/Block Loot Tables
+// 1.21	2026-09-02T14:08:40.1216776	TutorialMod/Block Loot Tables
 ecc0e747f923a03ade4500c4cef2b0bbc120174c data\tutorialmod\loot_table\blocks\ice_spray_button.json
 71e09395bc28cc5f3c6212e675881677ad8fb638 data\tutorialmod\loot_table\blocks\ice_spray_ore.json
-795c970a328c419ce3c31ec2af6f4f78156406e2 data\tutorialmod\loot_table\blocks\ice_spray_block.json
 467fdf51b48b1c772401c02e7ed167e596c66521 data\tutorialmod\loot_table\blocks\ice_spray_door.json
-5c993d20c7aca27055d7c3148986247faae17b3a data\tutorialmod\loot_table\blocks\ice_spray_stairs.json
 01eea86b560a2703335a64a1b32eed6da1b24cb7 data\tutorialmod\loot_table\blocks\ice_spray_slab.json
 8e022fbb33c252e3f498685158bae14f84951542 data\tutorialmod\loot_table\blocks\ice_spray_trapdoor.json
 117b2d97d352452e51e372c2a30e9c6a9846ac69 data\tutorialmod\loot_table\blocks\ice_spray_pressure_plate.json
+700b126c557517ea326f0e4e473838c68ed8373d data\tutorialmod\loot_table\blocks\polishing_machine.json
 1531bb8d5e44338e1e2a07681ce54f37a3802a65 data\tutorialmod\loot_table\blocks\ice_spray_fence_gate.json
 c7c68ab389837ff8327a3616702dd88c9d78b69a data\tutorialmod\loot_table\blocks\ice_spray_fence.json
+795c970a328c419ce3c31ec2af6f4f78156406e2 data\tutorialmod\loot_table\blocks\ice_spray_block.json
+5c993d20c7aca27055d7c3148986247faae17b3a data\tutorialmod\loot_table\blocks\ice_spray_stairs.json
 3ba07b20914cbaba9bb1a7e0b4680c051d3971d1 data\tutorialmod\loot_table\blocks\ice_spray_wall.json
