@@ -94,12 +94,12 @@ public class Hyperion extends SwordItem {
         return TypedActionResult.success(itemStack, false);
     }
 
-    public static final String Hyperion_Tooltip_Line1 = "tooltip.tutotialmod.hyperion.line1";
-    public static final String Hyperion_Tooltip_Line2 = "tooltip.tutotialmod.hyperion.line2";
-    public static final String Hyperion_Tooltip_Line3 = "tooltip.tutotialmod.hyperion.line3";
-    public static final String Hyperion_Tooltip_Line4 = "tooltip.tutotialmod.hyperion.line4";
-    public static final String Hyperion_Tooltip_Line5 = "tooltip.tutotialmod.hyperion.line5";
-    public static final String Hyperion_Tooltip_Line6 = "tooltip.tutotialmod.hyperion.line6";
+    public static final String Hyperion_Tooltip_Line1 = "tooltip.tutorialmod.hyperion.line1";
+    public static final String Hyperion_Tooltip_Line2 = "tooltip.tutorialmod.hyperion.line2";
+    public static final String Hyperion_Tooltip_Line3 = "tooltip.tutorialmod.hyperion.line3";
+    public static final String Hyperion_Tooltip_Line4 = "tooltip.tutorialmod.hyperion.line4";
+    public static final String Hyperion_Tooltip_Line5 = "tooltip.tutorialmod.hyperion.line5";
+    public static final String Hyperion_Tooltip_Line6 = "tooltip.tutorialmod.hyperion.line6";
     @Override
     public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
         tooltip.add(Text.translatable(Prospector.SPACE));
