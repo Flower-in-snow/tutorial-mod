@@ -27,6 +27,11 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.POLISHING_MACHINE);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.BOX);
 
+        blockStateModelGenerator.registerLog(ModBlocks.MENRIL_LOG).log(ModBlocks.MENRIL_LOG);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MENRIL_LOG).log(ModBlocks.STRIPPED_MENRIL_LOG);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MENRIL_PLANKS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MENRIL_LEAVES);
+
     }
 
     @Override

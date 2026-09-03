@@ -56,6 +56,14 @@ public class ModBlocks {
             new PolishingMachine(AbstractBlock.Settings.create().mapColor(MapColor.STONE_GRAY).instrument(NoteBlockInstrument.BASS)
                     .strength(2.5F).sounds(BlockSoundGroup.STONE)));
 
+    public static final Block MENRIL_LOG = register("menril_log", new PillarBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LOG)));
+
+    public static final Block MENRIL_PLANKS = register("menril_planks", new Block(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
+
+    public static final Block STRIPPED_MENRIL_LOG = register("stripped_menril_log", new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_CHERRY_LOG)));
+
+    public static final Block MENRIL_LEAVES = register("menril_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
+
 
     public static final Block BOX = register("box", new BoxBlock(AbstractBlock.Settings.create().mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).strength(2.5F).sounds(BlockSoundGroup.METAL).nonOpaque(), () -> ModBlockEntities.BOX));
     //调用方法注册

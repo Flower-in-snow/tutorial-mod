@@ -14,6 +14,8 @@ import com.example.tutorialmod.util.ModLootTableModifiers;
 import com.example.tutorialmod.villager.ModCustomVillagers;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.util.Identifier;
 
 import org.slf4j.Logger;
@@ -48,7 +50,16 @@ public class TutorialMod implements ModInitializer {
 		ModScreenHandlers.registerScreenHandlers();
 		ModRecipeTypes.registerRecipeTypes();
 
-		//api的写法
+		//fabric去皮专用api
+		StrippableBlockRegistry.register(ModBlocks.MENRIL_LOG, ModBlocks.STRIPPED_MENRIL_LOG);
+
+		//fabric添加可燃烧方块专用api
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MENRIL_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_MENRIL_LOG, 5, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MENRIL_PLANKS, 5 ,20);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.MENRIL_LEAVES, 30, 60);
+
+		//fabric添加燃料专用api
 		//FuelRegistry.INSTANCE.add(ModItems.FIRE_GEMSTONE, 1600);
 
 //		初始化调用

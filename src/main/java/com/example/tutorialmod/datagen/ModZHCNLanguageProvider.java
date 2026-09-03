@@ -49,6 +49,11 @@ public class ModZHCNLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.HAT, "帽子");
         translationBuilder.add(ModItems.MUSIC_DISC_LOVE_2000, "音乐唱片 - 遠野ひかる - LOVE 2000_H");
         translationBuilder.add(ModBlocks.BOX, "箱子");
+        translationBuilder.add(ModBlocks.MENRIL_LEAVES, "Menril 树叶");
+        translationBuilder.add(ModBlocks.MENRIL_LOG, "Menril 原木");
+        translationBuilder.add(ModBlocks.MENRIL_PLANKS, "Menril 木板");
+        translationBuilder.add(ModBlocks.STRIPPED_MENRIL_LOG, "削过皮的 Menril 原木");
+
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "教程组");
 
         translationBuilder.add("entity.minecraft.villager.magician", "魔术师");

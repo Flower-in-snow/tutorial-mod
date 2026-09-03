@@ -44,6 +44,10 @@ public class ModItemGroups {
                     entries.add(ModItems.MUSIC_DISC_LOVE_2000);
                     entries.add(ModBlocks.BOX);
                     entries.add(ModBlocks.POLISHING_MACHINE);
+                    entries.add(ModBlocks.MENRIL_LEAVES);
+                    entries.add(ModBlocks.MENRIL_LOG);
+                    entries.add(ModBlocks.MENRIL_PLANKS);
+                    entries.add(ModBlocks.STRIPPED_MENRIL_LOG);
 
                     entries.add(ModBlocks.ICE_SPRAY_STAIRS);
                     entries.add(ModBlocks.ICE_SPRAY_SLAB);

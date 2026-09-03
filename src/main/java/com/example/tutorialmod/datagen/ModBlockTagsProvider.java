@@ -41,5 +41,16 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
                 .add(ModBlocks.ICE_SPRAY_BUTTON);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MENRIL_LOG)
+                .add(ModBlocks.STRIPPED_MENRIL_LOG);
+
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(ModBlocks.MENRIL_PLANKS);
+
+        getOrCreateTagBuilder(BlockTags.LEAVES)
+                .add(ModBlocks.MENRIL_LEAVES);
+
     }
 }

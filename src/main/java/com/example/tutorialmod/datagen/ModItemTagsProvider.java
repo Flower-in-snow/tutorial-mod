@@ -1,5 +1,6 @@
 package com.example.tutorialmod.datagen;
 
+import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -23,5 +24,16 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
                 .add(ModItems.MUSIC_DISC_LOVE_2000);
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MENRIL_LOG.asItem())
+                .add(ModBlocks.STRIPPED_MENRIL_LOG.asItem());
+
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.MENRIL_PLANKS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.LEAVES)
+                .add(ModBlocks.MENRIL_LEAVES.asItem());
+
     }
 }

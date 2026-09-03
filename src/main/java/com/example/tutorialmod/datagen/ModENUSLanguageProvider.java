@@ -49,6 +49,10 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.HAT, "Hat");
         translationBuilder.add(ModItems.MUSIC_DISC_LOVE_2000, "Music Disc");
         translationBuilder.add(ModBlocks.POLISHING_MACHINE, "Polishing Machine");
+        translationBuilder.add(ModBlocks.MENRIL_LEAVES, "Menril Leaves");
+        translationBuilder.add(ModBlocks.MENRIL_LOG, "Menril Log");
+        translationBuilder.add(ModBlocks.MENRIL_PLANKS, "Menril Planks");
+        translationBuilder.add(ModBlocks.STRIPPED_MENRIL_LOG, "Stripped Menril Log");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 
