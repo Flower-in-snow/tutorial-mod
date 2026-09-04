@@ -34,6 +34,12 @@ public class ModBlockFamilies {
             .stairs(ModBlocks.ICE_SPRAY_STAIRS)
             .slab(ModBlocks.ICE_SPRAY_SLAB)
             .pressurePlate(ModBlocks.ICE_SPRAY_PRESSURE_PLATE)
-            .unlockCriterionName("has_ice_spray_block")
+            .unlockCriterionName("has_blocks")
             .build();
+
+    public static final BlockFamily MENRIL = register(ModBlocks.MENRIL_PLANKS)
+            .sign(ModBlocks.MENRIL_SIGN, ModBlocks.MENRIL_WALL_SIGN)
+            .unlockCriterionName("has_planks")
+            .build();
+
 }

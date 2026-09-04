@@ -5,6 +5,10 @@ import com.example.tutorialmod.block.custom.BoxBlock;
 import com.example.tutorialmod.block.custom.PolishingMachine;
 import com.example.tutorialmod.block.entity.ModBlockEntities;
 import com.example.tutorialmod.sound.ModSoundEvents;
+import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
+import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
@@ -66,6 +70,24 @@ public class ModBlocks {
 
 
     public static final Block BOX = register("box", new BoxBlock(AbstractBlock.Settings.create().mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).strength(2.5F).sounds(BlockSoundGroup.METAL).nonOpaque(), () -> ModBlockEntities.BOX));
+
+    public static final Identifier MENRIL_SIGN_TEXTURE = Identifier.of(TutorialMod.MOD_ID, "entity/signs/menril");
+
+    public static final Identifier MENRIL_HANGING_SIGH_TEXTURE = Identifier.of(TutorialMod.MOD_ID, "entity/signs/hanging/menril");
+
+    public static final Identifier MENRIL_HANGING_SIGN_GUI = Identifier.of(TutorialMod.MOD_ID, "textures/gui/hanging_signs/menril_hanging_sign");
+
+    public static final Block MENRIL_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "menril_sign"),
+            new TerraformSignBlock(MENRIL_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.CHERRY_SIGN)));
+
+    public static final Block MENRIL_HANGING_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "menril_hanging_sign"),
+            new TerraformHangingSignBlock(MENRIL_HANGING_SIGH_TEXTURE, MENRIL_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.CHERRY_HANGING_SIGN)));
+
+    public static final Block MENRIL_WALL_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "menril_wall_sign"),
+            new TerraformWallSignBlock(MENRIL_SIGN_TEXTURE, AbstractBlock.Settings.copy(Blocks.CHERRY_WALL_SIGN)));
+
+    public static final Block MENRIL_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "menril_wall_hanging_sign"),
+            new TerraformWallHangingSignBlock(MENRIL_HANGING_SIGH_TEXTURE, MENRIL_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.CHERRY_WALL_HANGING_SIGN)));
     //调用方法注册
     //下方是注册的两个方法
     public static void registeredBlockItems(String id, Block block){

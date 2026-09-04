@@ -17,53 +17,56 @@ import net.minecraft.util.Rarity;
 public class ModItems {
 //    下面代码的意思是创造了一个全局物品引入方法，他的名字是registeredItems，返回类型是Item,这样方便赋值后变量调取，后面是两个形参
 //    后面想引用只需registeredItems()
-    private static Item registeredItems(String id, Item item){
+    private static Item registerItems(String id, Item item){
 //        return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), Identifier.of(TutorialMod.MOD_ID, id)), item)
 //        查看Items类代码我们发现，注册物品的本质是用Registry类里的register方法
 //        上述这样写也可以，但是我们查看Registry类里的register方法，发现register方法可以简化
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), item);
     }
-    public static final Item ICE_SPRAY_WAND = registeredItems("ice_spray_wand", new IceSprayWand(new Item.Settings()
+    public static final Item ICE_SPRAY_WAND = registerItems("ice_spray_wand", new IceSprayWand(new Item.Settings()
             .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).rarity(Rarity.EPIC).maxCount(1)));//  创造新物品
-    public static final Item RAW_ICE_SPRAY_GEMSTONE = registeredItems("raw_ice_spray_gemstone", new Item(new Item.Settings()));
-    public static final Item ICE_SPRAY_GEMSTONE = registeredItems("ice_spray_gemstone", new Item(new Item.Settings()));
-    public static final Item FIRE_GEMSTONE = registeredItems("fire_gemstone", new Item(new Item.Settings().fireproof()));
-    public static final Item SORROW = registeredItems("sorrow", new Item(new Item.Settings().rarity(Rarity.RARE)));
+    public static final Item RAW_ICE_SPRAY_GEMSTONE = registerItems("raw_ice_spray_gemstone", new Item(new Item.Settings()));
+    public static final Item ICE_SPRAY_GEMSTONE = registerItems("ice_spray_gemstone", new Item(new Item.Settings()));
+    public static final Item FIRE_GEMSTONE = registerItems("fire_gemstone", new Item(new Item.Settings().fireproof()));
+    public static final Item SORROW = registerItems("sorrow", new Item(new Item.Settings().rarity(Rarity.RARE)));
 
-    public static final Item MUSIC_DISC_LOVE_2000 = registeredItems("music_disc_love_2000", new Item(new Item.Settings().maxCount(1)
+    public static final Item MUSIC_DISC_LOVE_2000 = registerItems("music_disc_love_2000", new Item(new Item.Settings().maxCount(1)
             .rarity(Rarity.RARE).jukeboxPlayable(ModJukeboxSongs.LOVE_2000)));
-    public static final Item ICE_ESSENCE = registeredItems("ice_essence", new ModFoodComponentsItem(new Item.Settings().food(ModFoodComponentsItem.ICE_ESSENCE)));
-    public static final Item PROSPECTOR = registeredItems("prospector", new Prospector(new Item.Settings().maxDamage(127)));
-    public static final Item PLATE = registeredItems("plate", new Item(new Item.Settings()));
+    public static final Item ICE_ESSENCE = registerItems("ice_essence", new ModFoodComponentsItem(new Item.Settings().food(ModFoodComponentsItem.ICE_ESSENCE)));
+    public static final Item PROSPECTOR = registerItems("prospector", new Prospector(new Item.Settings().maxDamage(127)));
+    public static final Item PLATE = registerItems("plate", new Item(new Item.Settings()));
 
-    public static final Item BINGONIMBUS_2000 = registeredItems("bingonimbus_2000",
+    public static final Item BINGONIMBUS_2000 = registerItems("bingonimbus_2000",
             new Bingonimbus(ModToolMaterials.BINGONIMBUS_2000, new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false))
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.BINGONIMBUS_2000, 29.0f, -2.8f))));
 
-    public static final Item SORROW_HELMET = registeredItems("sorrow_helmet",
+    public static final Item SORROW_HELMET = registerItems("sorrow_helmet",
             new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.HELMET,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
-    public static final Item SORROW_CHESTPLATE = registeredItems("sorrow_chestplate",
+    public static final Item SORROW_CHESTPLATE = registerItems("sorrow_chestplate",
             new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.CHESTPLATE,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
-    public static final Item SORROW_LEGGINGS = registeredItems("sorrow_leggings",
+    public static final Item SORROW_LEGGINGS = registerItems("sorrow_leggings",
             new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.LEGGINGS,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
-    public static final Item SORROW_BOOTS = registeredItems("sorrow_boots",
+    public static final Item SORROW_BOOTS = registerItems("sorrow_boots",
             new ModArmorItem(ModArmorMaterials.SORROW, ArmorItem.Type.BOOTS,
                     new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof().maxCount(1)));
 
-    public static final Item HAT = registeredItems("hat",
+    public static final Item HAT = registerItems("hat",
             new HatItem(HatItem.Type.HAT, new Item.Settings().component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).maxCount(1)));
 
-    public static final Item HYPERION = registeredItems("hyperion", new Hyperion(ModToolMaterials.HYPERION, new Item.Settings()
+    public static final Item HYPERION = registerItems("hyperion", new Hyperion(ModToolMaterials.HYPERION, new Item.Settings()
             .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.HYPERION, 14, -2.4F))
             .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).fireproof()));
 
-    //    这里的ModFoodComponentsItem是我自己写的一个类，继承了Item类，重写了getMaxUseTime方法
+    public static final Item MENRIL_SIGN = registerItems("menril_sign", new SignItem(new Item.Settings(), ModBlocks.MENRIL_SIGN, ModBlocks.MENRIL_WALL_SIGN));
+
+    public static final Item MENRIL_HANGING_SIGN = registerItems("menril_hanging_sign", new HangingSignItem(ModBlocks.MENRIL_HANGING_SIGN, ModBlocks.MENRIL_WALL_HANGING_SIGN, new Item.Settings()));
+
     public static void addItemtoIngredients(FabricItemGroupEntries fabricItemGroupEntries){
         //创建一个方法，参数是当前指定的物品栏栏目里面物品集合，这取决于我们在下面注册的物品栏栏目
         fabricItemGroupEntries.add(ICE_SPRAY_GEMSTONE);

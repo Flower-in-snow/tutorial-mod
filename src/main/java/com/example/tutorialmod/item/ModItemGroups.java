@@ -48,6 +48,8 @@ public class ModItemGroups {
                     entries.add(ModBlocks.MENRIL_LOG);
                     entries.add(ModBlocks.MENRIL_PLANKS);
                     entries.add(ModBlocks.STRIPPED_MENRIL_LOG);
+                    entries.add(ModItems.MENRIL_SIGN);
+                    entries.add(ModItems.MENRIL_HANGING_SIGN);
 
                     entries.add(ModBlocks.ICE_SPRAY_STAIRS);
                     entries.add(ModBlocks.ICE_SPRAY_SLAB);

@@ -53,6 +53,8 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.MENRIL_LOG, "Menril Log");
         translationBuilder.add(ModBlocks.MENRIL_PLANKS, "Menril Planks");
         translationBuilder.add(ModBlocks.STRIPPED_MENRIL_LOG, "Stripped Menril Log");
+        translationBuilder.add(ModBlocks.MENRIL_SIGN, "Menril Sign");
+        translationBuilder.add(ModBlocks.MENRIL_HANGING_SIGN, "Menril Hanging Sign");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 

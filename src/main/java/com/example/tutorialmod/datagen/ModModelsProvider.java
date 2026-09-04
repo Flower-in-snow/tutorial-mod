@@ -29,7 +29,6 @@ public class ModModelsProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerLog(ModBlocks.MENRIL_LOG).log(ModBlocks.MENRIL_LOG);
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MENRIL_LOG).log(ModBlocks.STRIPPED_MENRIL_LOG);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MENRIL_PLANKS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MENRIL_LEAVES);
 
     }
@@ -44,6 +43,7 @@ public class ModModelsProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.FIRE_GEMSTONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PLATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SORROW, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MENRIL_HANGING_SIGN, Models.GENERATED);
 
         //工具为手持物品形式
         itemModelGenerator.register(ModItems.BINGONIMBUS_2000, Models.HANDHELD);
