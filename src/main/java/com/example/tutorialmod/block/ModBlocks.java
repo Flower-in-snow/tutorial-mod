@@ -5,6 +5,7 @@ import com.example.tutorialmod.block.custom.BoxBlock;
 import com.example.tutorialmod.block.custom.PolishingMachine;
 import com.example.tutorialmod.block.entity.ModBlockEntities;
 import com.example.tutorialmod.sound.ModSoundEvents;
+import com.example.tutorialmod.world.tree.ModTreeGenerator;
 import com.terraformersmc.terraform.sign.api.block.TerraformHangingSignBlock;
 import com.terraformersmc.terraform.sign.api.block.TerraformSignBlock;
 import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock;
@@ -68,6 +69,7 @@ public class ModBlocks {
 
     public static final Block MENRIL_LEAVES = register("menril_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
 
+    public static final Block MENRIL_SAPLING = register("menril_sapling", new SaplingBlock(ModTreeGenerator.MENRIL, AbstractBlock.Settings.copy(Blocks.CHERRY_SAPLING)));
 
     public static final Block BOX = register("box", new BoxBlock(AbstractBlock.Settings.create().mapColor(MapColor.OAK_TAN).instrument(NoteBlockInstrument.BASS).strength(2.5F).sounds(BlockSoundGroup.METAL).nonOpaque(), () -> ModBlockEntities.BOX));
 
@@ -88,6 +90,7 @@ public class ModBlocks {
 
     public static final Block MENRIL_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "menril_wall_hanging_sign"),
             new TerraformWallHangingSignBlock(MENRIL_HANGING_SIGH_TEXTURE, MENRIL_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.CHERRY_WALL_HANGING_SIGN)));
+
     //调用方法注册
     //下方是注册的两个方法
     public static void registeredBlockItems(String id, Block block){

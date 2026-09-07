@@ -4,8 +4,12 @@ import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.custom.*;
 import com.example.tutorialmod.sound.ModJukeboxSongs;
+import com.example.tutorialmod.world.tree.ModTreeGenerator;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.UnbreakableComponent;
 import net.minecraft.item.*;
@@ -23,17 +27,25 @@ public class ModItems {
 //        上述这样写也可以，但是我们查看Registry类里的register方法，发现register方法可以简化
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, id), item);
     }
+
     public static final Item ICE_SPRAY_WAND = registerItems("ice_spray_wand", new IceSprayWand(new Item.Settings()
             .component(DataComponentTypes.UNBREAKABLE, new UnbreakableComponent(false)).rarity(Rarity.EPIC).maxCount(1)));//  创造新物品
+
     public static final Item RAW_ICE_SPRAY_GEMSTONE = registerItems("raw_ice_spray_gemstone", new Item(new Item.Settings()));
+
     public static final Item ICE_SPRAY_GEMSTONE = registerItems("ice_spray_gemstone", new Item(new Item.Settings()));
+
     public static final Item FIRE_GEMSTONE = registerItems("fire_gemstone", new Item(new Item.Settings().fireproof()));
+
     public static final Item SORROW = registerItems("sorrow", new Item(new Item.Settings().rarity(Rarity.RARE)));
 
     public static final Item MUSIC_DISC_LOVE_2000 = registerItems("music_disc_love_2000", new Item(new Item.Settings().maxCount(1)
             .rarity(Rarity.RARE).jukeboxPlayable(ModJukeboxSongs.LOVE_2000)));
+
     public static final Item ICE_ESSENCE = registerItems("ice_essence", new ModFoodComponentsItem(new Item.Settings().food(ModFoodComponentsItem.ICE_ESSENCE)));
+
     public static final Item PROSPECTOR = registerItems("prospector", new Prospector(new Item.Settings().maxDamage(127)));
+
     public static final Item PLATE = registerItems("plate", new Item(new Item.Settings()));
 
     public static final Item BINGONIMBUS_2000 = registerItems("bingonimbus_2000",
