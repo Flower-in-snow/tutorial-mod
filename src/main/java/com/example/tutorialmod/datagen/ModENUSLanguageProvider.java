@@ -84,7 +84,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(Prospector.Prospector_Line2, "Hold §5CTRL§r for More Information");
         translationBuilder.add(Bingonimbus.Bingoimbus_Tooltip_Line1, "A powerful tool that §2doesn't§r seem to break");
 
-        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_Line1, "§6 FULL SET BONUS: Mist Aura ( §r §e%d§r §6/4) §r");
+        translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_Line1, "§6 FULL SET BONUS: Mist Aura (§r §e%d§r §6/4) §r");
         translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_Line2, "§8 Hides the wearer in a guise of mist, §r");
         translationBuilder.add(ModArmorItem.Sorrow_ArmorTip_Line3, "§8 granting a strong mist aura. §r");
 

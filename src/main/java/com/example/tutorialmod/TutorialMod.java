@@ -12,6 +12,7 @@ import com.example.tutorialmod.tags.ModBlockTags;
 import com.example.tutorialmod.util.ModCustomTrades;
 import com.example.tutorialmod.util.ModLootTableModifiers;
 import com.example.tutorialmod.villager.ModCustomVillagers;
+import com.example.tutorialmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -49,6 +50,7 @@ public class TutorialMod implements ModInitializer {
 		ModStatusEffects.registerModStatusEffects();
 		ModScreenHandlers.registerScreenHandlers();
 		ModRecipeTypes.registerRecipeTypes();
+		ModWorldGeneration.registerWorldGenerations();
 
 		//fabric去皮专用api
 		StrippableBlockRegistry.register(ModBlocks.MENRIL_LOG, ModBlocks.STRIPPED_MENRIL_LOG);
