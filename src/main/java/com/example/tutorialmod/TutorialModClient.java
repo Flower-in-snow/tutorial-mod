@@ -15,5 +15,7 @@ public class TutorialModClient implements ClientModInitializer {
         //第二个参数的来源要查看register类，发现里面有个接口，再点进接口，发现是单方法接口 → 又是函数式接口 → lambda 或 ::new
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MENRIL_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.IRIS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_IRIS, RenderLayer.getCutout());
     }
 }

@@ -2,6 +2,7 @@ package com.example.tutorialmod.datagen;
 
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.tags.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -35,5 +36,8 @@ public class ModItemTagsProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.LEAVES)
                 .add(ModBlocks.MENRIL_LEAVES.asItem());
 
+        getOrCreateTagBuilder(ModItemTags.MENRIL)
+                .add(ModBlocks.MENRIL_LOG.asItem())
+                .add(ModBlocks.STRIPPED_MENRIL_LOG.asItem());
     }
 }

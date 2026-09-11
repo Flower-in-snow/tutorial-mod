@@ -56,6 +56,7 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.MENRIL_SIGN, "Menril Sign");
         translationBuilder.add(ModBlocks.MENRIL_HANGING_SIGN, "Menril Hanging Sign");
         translationBuilder.add(ModBlocks.MENRIL_SAPLING, "Menril Sapling");
+        translationBuilder.add(ModBlocks.IRIS, "Iris");
 
         translationBuilder.add(ModItemGroups.TUTORIAL_GROUP, "Tutorial Group");
 
@@ -73,6 +74,8 @@ public class ModENUSLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("sounds.tutorialmod.teleport", "Teleport");
         translationBuilder.add("sounds.tutorialmod.explode", "Explode");
         translationBuilder.add("container.tutorialmod.polishing_machine", "Polishing Machine");
+        translationBuilder.add("tag.item.tutorialmod.menril_logs", "Menril Logs");
+        translationBuilder.add("tag.block.tutorialmod.prospector_ore_list", "Prospector Ore List");
 
 
         translationBuilder.add(Prospector.KEY_PRECISE, "Successfully Found ");

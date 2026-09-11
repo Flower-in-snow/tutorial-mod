@@ -4,6 +4,7 @@ import com.example.tutorialmod.TutorialMod;
 import com.example.tutorialmod.block.ModBlockFamilies;
 import com.example.tutorialmod.block.ModBlocks;
 import com.example.tutorialmod.item.ModItems;
+import com.example.tutorialmod.tags.ModItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.family.BlockFamily;
@@ -43,6 +44,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.ICE_SPRAY_GEMSTONE,
                 RecipeCategory.BUILDING_BLOCKS, ModBlocks.ICE_SPRAY_BLOCK);
         //这个函数的功能是提供可逆合成。合成gemstone时，其配方属于MISC，合成block时，其配方属于BUILDING_BLOCKS
+
+        offerPlanksRecipe(exporter, ModBlocks.MENRIL_PLANKS, ModItemTags.MENRIL, 4);
 
         offerSmelting(exporter, RAW_ICE_SPRAY_GEMSTONE, RecipeCategory.MISC, ModItems.RAW_ICE_SPRAY_GEMSTONE,
                 0.7f, 200, "gemstone");
@@ -112,7 +115,6 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 .input(ModItems.RAW_ICE_SPRAY_GEMSTONE)
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_ICE_SPRAY_GEMSTONE))
                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "raw_gemstone_to_ore"));
-
 
         generateFamilies(exporter, FeatureSet.of(FeatureFlags.VANILLA));
     }

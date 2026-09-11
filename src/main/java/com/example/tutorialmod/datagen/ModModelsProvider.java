@@ -31,6 +31,7 @@ public class ModModelsProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MENRIL_LOG).log(ModBlocks.STRIPPED_MENRIL_LOG);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MENRIL_LEAVES);
         blockStateModelGenerator.registerTintableCross(ModBlocks.MENRIL_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(ModBlocks.IRIS, ModBlocks.POTTED_IRIS, BlockStateModelGenerator.TintType.NOT_TINTED);
 
     }
 

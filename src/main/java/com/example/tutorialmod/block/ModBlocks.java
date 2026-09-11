@@ -12,6 +12,8 @@ import com.terraformersmc.terraform.sign.api.block.TerraformWallHangingSignBlock
 import com.terraformersmc.terraform.sign.api.block.TerraformWallSignBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -91,6 +93,10 @@ public class ModBlocks {
     public static final Block MENRIL_WALL_HANGING_SIGN = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "menril_wall_hanging_sign"),
             new TerraformWallHangingSignBlock(MENRIL_HANGING_SIGH_TEXTURE, MENRIL_HANGING_SIGN_GUI, AbstractBlock.Settings.copy(Blocks.CHERRY_WALL_HANGING_SIGN)));
 
+    public static final Block IRIS = register("iris", new FlowerBlock(StatusEffects.NIGHT_VISION, 0.4F, AbstractBlock.Settings.copy(Blocks.DANDELION).mapColor(MapColor.DARK_DULL_PINK)));
+
+    public static final Block POTTED_IRIS = Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, "potted_iris"),
+            new FlowerPotBlock(IRIS, AbstractBlock.Settings.create().breakInstantly().nonOpaque().pistonBehavior(PistonBehavior.DESTROY)));
     //调用方法注册
     //下方是注册的两个方法
     public static void registeredBlockItems(String id, Block block){

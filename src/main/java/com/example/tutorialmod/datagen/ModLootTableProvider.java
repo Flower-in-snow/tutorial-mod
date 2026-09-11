@@ -27,5 +27,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ICE_SPRAY_DOOR, doorDrops(ModBlocks.ICE_SPRAY_DOOR));
         addDrop(ModBlocks.ICE_SPRAY_TRAPDOOR);
         addDrop(ModBlocks.POLISHING_MACHINE);
+        addDrop(ModBlocks.BOX);
+        addDrop(ModBlocks.MENRIL_SAPLING);
+        addDrop(ModBlocks.IRIS);
+        addDrop(ModBlocks.MENRIL_LOG);
+        addDrop(ModBlocks.STRIPPED_MENRIL_LOG);
+        addDrop(ModBlocks.MENRIL_PLANKS);
+        addDrop(ModBlocks.MENRIL_HANGING_SIGN);
+        addDrop(ModBlocks.MENRIL_WALL_HANGING_SIGN, ModBlocks.MENRIL_HANGING_SIGN);
+        addDrop(ModBlocks.MENRIL_SIGN);
+        addDrop(ModBlocks.MENRIL_WALL_SIGN, ModBlocks.MENRIL_SIGN);
+        addDrop(ModBlocks.MENRIL_LEAVES);
+        addDrop(ModBlocks.POTTED_IRIS, pottedPlantDrops(ModBlocks.IRIS));
     }
 }
