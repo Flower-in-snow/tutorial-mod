@@ -1,3 +1,5 @@
-// 1.21	2026-09-11T11:22:25.8472268	TutorialMod/World Gen Data Provider
+// 1.21	2026-09-12T20:23:57.8339247	TutorialMod/World Gen Data Provider
 fd16a609bd10dbc204e248f4013f03f2492f8433 data\tutorialmod\worldgen\placed_feature\menril_checked.json
+32cf594b2dc038762eb8740043b951a230518979 data\tutorialmod\worldgen\placed_feature\iris.json
+80ebdb80a4df3383f6ba97bd6b687c61f9c0bffa data\tutorialmod\worldgen\configured_feature\iris.json
 b7c308ba3c4f8c591d66623c785e5deac8836bb1 data\tutorialmod\worldgen\configured_feature\menril.json

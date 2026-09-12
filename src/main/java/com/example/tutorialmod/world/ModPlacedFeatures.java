@@ -9,24 +9,32 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
 
 import java.util.List;
 
-public class ModPlacedFeatures {
+public class  ModPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> MENRIL_CHECKED = of("menril_checked");
+
+    public static final RegistryKey<PlacedFeature> IRIS_KEY = of("iris");
     public static RegistryKey<PlacedFeature> of(String id) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(TutorialMod.MOD_ID, id));
     }
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable){
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup =featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
         register(featureRegisterable, MENRIL_CHECKED, registryEntryLookup.getOrThrow(ModConfiguredFeatures.MENRIL),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                         PlacedFeatures.createCountExtraModifier(2, 0.1f, 2),
                         ModBlocks.MENRIL_SAPLING
                 ));
+
+        PlacedFeatures.register(featureRegisterable, IRIS_KEY, registryEntryLookup.getOrThrow(ModConfiguredFeatures.IRIS),
+                RarityFilterPlacementModifier.of(4), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
     }
 
     public static void register(

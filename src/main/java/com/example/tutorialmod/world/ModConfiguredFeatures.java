@@ -17,6 +17,8 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> MENRIL = of("menril");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> IRIS = of("iris");
+
     private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
         return new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(log),
@@ -37,5 +39,7 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable){
         ConfiguredFeatures.register(featureRegisterable, MENRIL, Feature.TREE, menril().build());
+        ConfiguredFeatures.register(featureRegisterable, IRIS, Feature.FLOWER, new RandomPatchFeatureConfig(32, 6, 2,
+                PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.IRIS)))));
     }
 }
