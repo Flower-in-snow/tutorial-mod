@@ -39,7 +39,9 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(ModBlockTags.PROSPECTOR_ORE_LIST)
                 .forceAddTag(BlockTags.DIAMOND_ORES)
-                .forceAddTag(BlockTags.EMERALD_ORES);
+                .forceAddTag(BlockTags.EMERALD_ORES)
+                .add(ModBlocks.ICE_SPRAY_ORE);
+
 
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
                 .add(ModBlocks.ICE_SPRAY_FENCE);
